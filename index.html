@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Claire Ratcliffe Psychotherapy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --white:#ffffff;
+  --off:#f8f9f7;
+  --light:#eef0eb;
+  --border:#cdd0c8;
+  --sage:#6b7f5e;
+  --sage-lt:#8fa080;
+  --sage-dk:#4a5940;
+  --charcoal:#1e2018;
+  --mid:#333630;
+  --muted:#5a5e54;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Jost',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--white);color:var(--charcoal);font-family:var(--sans);font-weight:300;line-height:1.7;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.page{display:none;animation:fi .3s ease}
+.page.active{display:block}
+@keyframes fi{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--white);border-bottom:1px solid var(--border);padding:0 2.5rem;display:flex;align-items:center;justify-content:space-between;height:64px;transition:box-shadow .3s}
+nav.sc{box-shadow:0 1px 16px rgba(0,0,0,.06)}
+.logo{font-family:var(--serif);font-size:1.1rem;font-weight:400;cursor:pointer;color:var(--charcoal);white-space:nowrap}
+.nlinks{display:flex;align-items:center;list-style:none}
+.nlinks a{font-size:.7rem;font-weight:400;letter-spacing:.11em;text-transform:uppercase;color:var(--mid);cursor:pointer;transition:color .2s;white-space:nowrap;padding:.3rem .8rem}
+.nlinks a:hover{color:var(--charcoal)}
+.ndiv{width:1px;height:18px;background:var(--border);margin:0 .3rem;flex-shrink:0}
+.npill{background:var(--sage);color:var(--white)!important;padding:.38rem 1rem!important;margin-left:.3rem}
+.npill:hover{background:var(--sage-dk)!important}
+.npillo{border:1px solid var(--sage);color:var(--sage)!important;padding:.35rem .9rem!important;margin-left:.3rem}
+.npillo:hover{background:var(--sage);color:var(--white)!important}
+.hbg{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:.5rem}
+.hbg span{display:block;width:22px;height:1px;background:var(--charcoal)}
+.mm{display:none;position:fixed;top:64px;left:0;right:0;background:var(--white);z-index:99;padding:1.5rem 2rem;border-bottom:1px solid var(--border);flex-direction:column}
+.mm.open{display:flex}
+.mm a{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);cursor:pointer;padding:.65rem 0;border-bottom:1px solid var(--border)}
+.mm a:last-child{border-bottom:none}
+.mml{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);padding:.8rem 0 .15rem;margin-top:.3rem}
+
+/* LAYOUT */
+.w{max-width:1100px;margin:0 auto;padding:0 2rem}
+.wn{max-width:760px;margin:0 auto;padding:0 2rem}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.2}
+
+.btn{display:inline-block;padding:.7rem 1.7rem;font-family:var(--sans);font-size:.7rem;font-weight:400;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;transition:.25s;border:1px solid transparent}
+.bdk{background:var(--charcoal);color:var(--white);border-color:var(--charcoal)}.bdk:hover{background:var(--sage-dk);border-color:var(--sage-dk)}
+.bsg{background:var(--sage);color:var(--white);border-color:var(--sage)}.bsg:hover{background:var(--sage-dk);border-color:var(--sage-dk)}
+.bot{background:transparent;color:var(--charcoal);border-color:var(--charcoal)}.bot:hover{background:var(--charcoal);color:var(--white)}
+.bots{background:transparent;color:var(--sage);border-color:var(--sage)}.bots:hover{background:var(--sage);color:var(--white)}
+.blt{background:var(--white);color:var(--charcoal);border-color:var(--white)}.blt:hover{background:transparent;color:var(--white);border-color:var(--white)}
+.botlt{background:transparent;color:var(--white);border-color:rgba(255,255,255,.5)}.botlt:hover{background:rgba(255,255,255,.1)}
+
+.lbl{font-family:var(--sans);font-size:.67rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--sage);margin-bottom:.65rem;display:block}
+.dv{width:36px;height:1px;background:var(--border);margin:1rem 0}
+
+/* HERO */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding-top:64px}
+.hl{display:flex;flex-direction:column;justify-content:center;padding:5rem 4rem 5rem 3.5rem}
+.hero h1{font-size:clamp(2.6rem,3.6vw,3.9rem);font-weight:300;margin-bottom:1.1rem;line-height:1.12;color:var(--charcoal)}
+.hero h1 em{font-style:italic;color:var(--sage)}
+.hsub{font-size:.95rem;color:var(--mid);max-width:420px;margin-bottom:2rem;line-height:1.88}
+.hacts{display:flex;gap:.7rem;flex-wrap:wrap}
+.hr{position:relative;overflow:hidden;background:var(--light)}
+.himg{width:100%;height:100%;object-fit:cover}
+
+/* QUOTE */
+.qb{background:var(--charcoal);color:var(--white);padding:3.5rem 2rem;text-align:center}
+.qb blockquote{font-family:var(--serif);font-size:clamp(1.3rem,2vw,1.9rem);font-style:italic;font-weight:300;max-width:640px;margin:0 auto .6rem;line-height:1.5}
+.qb cite{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+
+/* OFFER GRID */
+.og{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border)}
+.oc{background:var(--white);padding:2.4rem 2rem;cursor:pointer;transition:background .2s}
+.oc:hover{background:var(--off)}
+.onum{font-family:var(--serif);font-size:2.6rem;font-weight:300;color:var(--border);line-height:1;margin-bottom:1rem}
+.oc h3{font-size:1.3rem;margin-bottom:.5rem}
+.oc p{font-size:.86rem;color:var(--mid);margin-bottom:1rem;line-height:1.8}
+.op{font-family:var(--serif);font-size:1.4rem;color:var(--sage);margin-bottom:1rem}
+.op span{font-size:.8rem;color:var(--muted);font-family:var(--sans)}
+.oa{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:.45rem}
+.oa::after{content:'→';transition:transform .2s}
+.oc:hover .oa::after{transform:translateX(4px)}
+
+/* INNER HERO split with image */
+.ih{padding:8.5rem 0 4.5rem;background:var(--off)}
+.ih-split{display:grid;grid-template-columns:1fr 1fr;min-height:420px;padding-top:64px;background:var(--off)}
+.ih-split-l{display:flex;flex-direction:column;justify-content:center;padding:4rem 4rem 4rem 0}
+.ih-split-r{position:relative;overflow:hidden;background:var(--light)}
+.ih-split-r img{width:100%;height:100%;object-fit:cover}
+.ih-compact{padding:8rem 0 3rem;background:var(--off)}
+.ih-dk{background:var(--charcoal)}
+.ih-dk .lbl{color:var(--sage-lt)}
+.ih-dk h1{color:var(--white)}
+.ih-dk h1 em{color:var(--sage-lt)}
+.ih-dk p{color:rgba(255,255,255,.65)}
+.ih-sage{background:var(--sage)}
+.ih-sage .lbl{color:rgba(255,255,255,.7)}
+.ih-sage h1{color:var(--white)}
+.ih-sage h1 em{color:rgba(255,255,255,.8);font-style:italic}
+.ih-sage p{color:rgba(255,255,255,.8)}
+.ih-c{max-width:680px}
+.ih h1{font-size:clamp(2.1rem,3.5vw,3.4rem);margin:.35rem 0 1.1rem}
+.ih h1 em{font-style:italic;color:var(--sage)}
+.ih p{font-size:.97rem;color:var(--mid);margin-bottom:1.7rem;line-height:1.88;max-width:560px}
+.ih-acts{display:flex;gap:.7rem;flex-wrap:wrap}
+
+/* TWO COL */
+.tc{display:grid;grid-template-columns:3fr 2fr;gap:4.5rem;padding:5rem 0;align-items:start}
+.tcf{grid-template-columns:2fr 3fr}
+.tce{grid-template-columns:1fr 1fr}
+
+/* PROSE */
+.pr h2{font-size:clamp(1.45rem,2.2vw,2rem);margin-bottom:.9rem}
+.pr p{color:var(--mid);margin-bottom:.9rem;font-size:.9rem;line-height:1.88}
+.pr ul{list-style:none;display:flex;flex-direction:column;gap:.55rem;margin:.7rem 0}
+.pr ul li{display:flex;align-items:flex-start;gap:.65rem;font-size:.87rem;color:var(--mid)}
+.pr ul li::before{content:'—';color:var(--border);flex-shrink:0;margin-top:.1rem}
+
+/* PRICE CARD */
+.pc{background:var(--off);padding:2rem;border-top:3px solid var(--sage)}
+.pc.dk{border-color:var(--charcoal)}
+.pc h3{font-size:1.05rem;margin-bottom:.35rem}
+.pb{font-family:var(--serif);font-size:2.7rem;color:var(--charcoal);line-height:1;margin:.7rem 0 .2rem}
+.pb sup{font-size:1.1rem;vertical-align:super}
+.pn{font-size:.78rem;color:var(--muted);margin-bottom:1.1rem}
+.pf{list-style:none;display:flex;flex-direction:column;gap:.45rem;margin-bottom:1.5rem}
+.pf li{font-size:.82rem;color:var(--mid);display:flex;align-items:flex-start;gap:.45rem}
+.pf li::before{content:'✓';color:var(--sage);flex-shrink:0}
+
+/* BOXES */
+.tb{background:var(--off);border-left:2px solid var(--border);padding:1.5rem;margin:1.4rem 0}
+.tb h4{font-family:var(--sans);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:.7rem}
+.tb ul{list-style:none;display:flex;flex-direction:column;gap:.4rem}
+.tb ul li{font-size:.83rem;color:var(--mid);display:flex;align-items:flex-start;gap:.45rem}
+.tb ul li::before{content:'·';color:var(--border)}
+.ab{background:var(--charcoal);color:rgba(255,255,255,.7);padding:2rem;margin:1.6rem 0}
+.ab h4{font-family:var(--serif);font-size:1.1rem;color:var(--white);margin-bottom:.6rem}
+.ab p{font-size:.86rem;line-height:1.85;margin-bottom:.5rem}
+.ab ul{list-style:none;display:flex;flex-direction:column;gap:.45rem}
+.ab ul li{font-size:.83rem;display:flex;align-items:flex-start;gap:.55rem}
+.ab ul li::before{content:'!';color:var(--sage-lt);flex-shrink:0}
+
+/* SECTIONS */
+.os{background:var(--off);padding:4.5rem 0}
+.ds{background:var(--charcoal);color:var(--white);padding:4.5rem 0}
+.ds h2{color:var(--white);font-size:clamp(1.45rem,2.2vw,2rem);margin-bottom:.9rem}
+.ds p{color:rgba(255,255,255,.65);font-size:.9rem;line-height:1.88;margin-bottom:.9rem}
+.ds .lbl{color:var(--sage-lt)}
+.ds ul{list-style:none;display:flex;flex-direction:column;gap:.55rem}
+.ds ul li{font-size:.87rem;color:rgba(255,255,255,.65);display:flex;align-items:flex-start;gap:.65rem}
+.ds ul li::before{content:'—';color:rgba(255,255,255,.25);flex-shrink:0}
+.ss{background:var(--sage);padding:4.5rem 0}
+.ss h2{color:var(--white)}
+.ss p{color:rgba(255,255,255,.8);font-size:.9rem;line-height:1.88;margin-bottom:.9rem}
+.ss .lbl{color:rgba(255,255,255,.7)}
+
+/* FAQ */
+.fi{border-top:1px solid var(--border);padding:1.2rem 0}
+.fi:last-child{border-bottom:1px solid var(--border)}
+.fq{font-family:var(--serif);font-size:1.08rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.fi-ico{flex-shrink:0;font-size:1.1rem;color:var(--muted);transition:transform .3s}
+.fq.open .fi-ico{transform:rotate(45deg)}
+.fa{display:none;font-size:.87rem;color:var(--mid);padding-top:.7rem;line-height:1.88}
+.fa.open{display:block}
+
+/* FORMS */
+.fp{background:var(--off);padding:2.5rem;border:1px solid var(--border)}
+.fg{margin-bottom:1.1rem}
+.fg label{display:block;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:.35rem}
+.fg input,.fg select,.fg textarea{width:100%;padding:.7rem .85rem;background:var(--white);border:1px solid var(--border);color:var(--charcoal);font-family:var(--sans);font-size:.87rem;font-weight:300;outline:none;transition:border-color .2s;-webkit-appearance:none;border-radius:0}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--sage)}
+.fg textarea{resize:vertical;min-height:100px}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+.cbg{display:flex;flex-direction:column;gap:.6rem;margin:1rem 0}
+.ci{display:flex;align-items:flex-start;gap:.6rem}
+.ci input[type=checkbox]{width:14px;height:14px;flex-shrink:0;margin-top:.24rem;accent-color:var(--sage)}
+.ci label{font-size:.83rem;color:var(--mid);text-transform:none;letter-spacing:0}
+.req-note{font-size:.74rem;color:#b94040;margin:.3rem 0 .7rem;display:none}
+.ci input[type=checkbox].req-cb:not(:checked) ~ label::after{content:' *';color:#b94040}
+input:invalid{border-color:#e0a0a0}
+.dh{font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:1.6rem 0 .7rem;padding-top:1.5rem;border-top:1px solid var(--border)}
+.fn{font-size:.76rem;color:var(--muted);font-style:italic;margin:.7rem 0}
+.cr{display:flex;align-items:flex-start;gap:.6rem;margin:1rem 0}
+.cr input[type=checkbox]{width:14px;height:14px;flex-shrink:0;margin-top:.22rem;accent-color:var(--sage)}
+.cr label{font-size:.83rem;color:var(--mid)}
+
+/* BOOKING — simplified */
+.bk-wrap{max-width:860px;margin:0 auto}
+.bk-select-wrap{padding:3rem 0 0}
+.bk-select-wrap label{display:block;font-size:.75rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem}
+.bk-type{width:100%;padding:.9rem 1rem;background:var(--white);border:2px solid var(--sage);color:var(--charcoal);font-family:var(--sans);font-size:1rem;font-weight:400;outline:none;-webkit-appearance:none;border-radius:0;cursor:pointer}
+.bk-panel{display:none;padding:2.5rem 0}
+.bk-panel.active{display:block}
+.bk-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.fee-list{list-style:none;margin:1rem 0 1.5rem}
+.fee-list li{display:flex;justify-content:space-between;align-items:baseline;padding:.6rem 0;border-bottom:1px solid var(--border);font-size:.88rem;color:var(--mid)}
+.fee-list li span:last-child{font-family:var(--serif);font-size:1.2rem;color:var(--charcoal)}
+.acuity-placeholder{background:var(--light);border:1px dashed var(--border);padding:2rem;text-align:center;margin:1.2rem 0}
+.acuity-placeholder p{font-size:.82rem;color:var(--muted);font-style:italic}
+
+/* HUB TABS */
+.ht{display:flex;gap:1px;background:var(--border);position:sticky;top:64px;z-index:50}
+.htb{flex:1;padding:1.1rem;background:var(--white);text-align:center;cursor:pointer;transition:background .2s;border-bottom:3px solid transparent}
+.htb:hover{background:var(--off)}
+.htb.active{border-bottom-color:var(--sage)}
+.htb span{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);display:block}
+.htb.active span{color:var(--charcoal)}
+.hp{display:none}
+.hp.active{display:block}
+
+/* ABOUT / QUALS */
+.asp{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;padding:5rem 0 3rem}
+.ai{position:relative;aspect-ratio:4/5}
+.ai img{width:100%;height:100%;object-fit:cover}
+.ai::after{content:'';position:absolute;inset:-10px -10px 10px 10px;border:1px solid var(--border);z-index:-1}
+.qg{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;padding:4rem 0}
+.qb2 h3{font-size:1.05rem;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:1px solid var(--border)}
+.qb2 ul{list-style:none;display:flex;flex-direction:column;gap:.45rem}
+.qb2 ul li{font-size:.83rem;color:var(--mid);padding-left:.9rem;position:relative;line-height:1.6}
+.qb2 ul li::before{content:'·';position:absolute;left:0;color:var(--border)}
+
+/* APPROACH */
+.apg{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;margin:1.8rem 0}
+.apc{background:var(--off);padding:1.8rem;border-top:2px solid var(--border)}
+.apc h4{font-size:1.05rem;margin-bottom:.4rem}
+.apc p{font-size:.84rem;color:var(--mid);line-height:1.8;font-style:italic}
+.apc cite{display:block;margin-top:.4rem;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+
+/* FEES */
+.fg2{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:2rem 0}
+.fc{background:var(--off);padding:1.8rem;border-top:2px solid var(--border)}
+.fc.sg{border-color:var(--sage)}
+.fc h3{font-size:1.05rem;margin-bottom:.9rem}
+.fc table{width:100%;border-collapse:collapse}
+.fc table td{padding:.38rem 0;font-size:.84rem;color:var(--mid);border-bottom:1px solid var(--border)}
+.fc table td:last-child{text-align:right;font-family:var(--serif);font-size:1.1rem;color:var(--charcoal)}
+.fb{background:var(--off);border:1px solid var(--border);padding:1.6rem 2rem;font-size:.84rem;line-height:1.8;margin:2rem 0}
+.fb strong{color:var(--charcoal)}
+
+/* CONTACT */
+.cs{display:grid;grid-template-columns:1fr 1fr;gap:5rem;padding:5rem 0;align-items:start}
+.cd{margin:.7rem 0;font-size:.9rem;color:var(--mid)}
+.cd strong{display:block;font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:.15rem}
+.sp{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.5rem}
+.sp a{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--white);padding:.38rem .8rem;border:1px solid rgba(255,255,255,.35);transition:.2s;background:rgba(255,255,255,.08)}
+.sp a:hover{border-color:var(--sage-lt);color:var(--sage-lt);background:rgba(255,255,255,.14)}
+
+/* FOOTER */
+footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:3.5rem 0 2rem}
+.fi2{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
+.fb2 h3{font-family:var(--serif);font-size:1.1rem;color:var(--white);margin-bottom:.55rem}
+.fb2 p{font-size:.8rem;line-height:1.8;max-width:240px}
+.fc2 h4{font-family:var(--sans);font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--white);margin-bottom:.8rem}
+.fc2 ul{list-style:none;display:flex;flex-direction:column;gap:.45rem}
+.fc2 ul a{font-size:.8rem;cursor:pointer;transition:color .2s}
+.fc2 ul a:hover{color:var(--white)}
+.fbo{border-top:1px solid rgba(255,255,255,.1);padding-top:1.3rem;display:flex;justify-content:space-between;align-items:center;font-size:.74rem;flex-wrap:wrap;gap:.8rem}
+
+/* MODAL */
+.mo{display:none;position:fixed;inset:0;background:rgba(30,32,24,.75);z-index:200;align-items:center;justify-content:center}
+.mo.open{display:flex}
+.md{background:var(--white);padding:2.8rem;max-width:440px;width:90%;text-align:center;animation:fi .3s ease}
+.md h3{font-size:1.6rem;margin-bottom:.7rem}
+.md p{color:var(--mid);font-size:.87rem;margin-bottom:1.6rem;line-height:1.8}
+
+/* SESSION TABLE */
+.st{width:100%;border-collapse:collapse;margin:1.2rem 0}
+.st th{font-family:var(--sans);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:left;padding:.55rem .9rem;border-bottom:1px solid var(--border)}
+.st td{padding:.8rem .9rem;font-size:.87rem;color:var(--mid);border-bottom:1px solid var(--border)}
+.st tr:hover td{background:var(--off)}
+.stpc{font-family:var(--serif);font-size:1.2rem;color:var(--charcoal)!important}
+.bdg{display:inline-block;padding:.14rem .5rem;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;background:var(--light);color:var(--muted)}
+
+/* RESPONSIVE */
+@media(max-width:1040px){.nlinks{display:none}.hbg{display:flex}.fi2{grid-template-columns:1fr 1fr}}
+@media(max-width:820px){
+  .hero{grid-template-columns:1fr;min-height:auto}.hr{display:none}.hl{padding:4rem 2rem 3rem}
+  .tc,.tcf,.tce,.asp,.cs{grid-template-columns:1fr;gap:2.5rem}
+  .og,.fg2,.apg,.qg,.bk-grid{grid-template-columns:1fr}
+  .fr{grid-template-columns:1fr}
+  .fi2{grid-template-columns:1fr}.ai{max-width:360px}
+  .ih-split{grid-template-columns:1fr;padding-top:64px}.ih-split-r{min-height:260px}.ih-split-l{padding:3rem 0 2rem}
+}
+</style>
+</head>
+<body>
+<!-- NAV -->
+<nav id="nav">
+  <div class="logo" onclick="sp('home')">Claire Ratcliffe Psychotherapy</div>
+  <ul class="nlinks">
+    <li><a onclick="sp('home')">Home</a></li>
+    <li><a onclick="sp('therapy')">Therapy</a></li>
+    <li><a onclick="sp('supervision')">Supervision</a></li>
+    <li><a onclick="sp('about')">About Me</a></li>
+    <li><a onclick="sp('fees')">Fees</a></li>
+    <li><a onclick="sp('contact')">Contact</a></li>
+    <div class="ndiv"></div>
+    <li><a onclick="sp('book')" class="npillo">Book a Session</a></li>
+    <li><a onclick="sp('therapists')" class="npill">For Therapists</a></li>
+  </ul>
+  <button class="hbg" id="hbg" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mm" id="mm">
+  <div class="mml">For Clients</div>
+  <a onclick="sp('home');cm()">Home</a>
+  <a onclick="sp('therapy');cm()">Therapy &amp; Couples Intensive</a>
+  <a onclick="sp('supervision');cm()">Clinical Supervision</a>
+  <a onclick="sp('about');cm()">About Me</a>
+  <a onclick="sp('fees');cm()">Fees</a>
+  <a onclick="sp('contact');cm()">Contact</a>
+  <div class="mml">Book &amp; Join</div>
+  <a onclick="sp('book');cm()" style="color:var(--sage)">Book a Session</a>
+  <a onclick="sp('therapists');cm()" style="color:var(--sage)">For Therapists</a>
+  <div class="mml">Legal &amp; Info</div>
+  <a onclick="sp('faq');cm()">FAQs</a>
+  <a onclick="sp('privacy');cm()">Privacy Policy</a>
+  <a onclick="sp('terms');cm()">Terms &amp; Conditions</a>
+</div>
+
+<!-- HOME -->
+<div class="page active" id="page-home">
+  <section class="hero">
+    <div class="hl">
+      <span class="lbl">Online — UK &amp; International</span>
+      <h1>Psychotherapy,<br>Couples Therapy<br>&amp; <em>Supervision</em></h1>
+      <p class="hsub">Helping you build meaningful relationships — with others and with yourself. Online sessions for individuals, couples and therapists across the UK and internationally.</p>
+      <div class="hacts">
+        <span class="btn bdk" onclick="sp('book')">Book a session</span>
+        <span class="btn bot" onclick="sp('therapy')">About therapy</span>
+        <span class="btn bots" onclick="sp('therapists')">For therapists</span>
+      </div>
+    </div>
+    <div class="hr"><img class="himg" src="https://images.squarespace-cdn.com/content/v1/6817c0c8f248c61a7135f52a/1746546257961-TO6OZ9P59EBSAMDPP4ZE/unsplash-image-fpoHihXiMhg.jpg" alt="" onerror="this.style.display='none'"/></div>
+  </section>
+  <div class="qb"><blockquote>"Until you make the unconscious conscious, it will direct your life and you will call it fate."</blockquote><cite>— Carl Jung</cite></div>
+  <section style="padding:5.5rem 0">
+    <div class="w">
+      <div style="text-align:center;margin-bottom:3rem">
+        <span class="lbl" style="display:block;text-align:center">How we can work together</span>
+        <h2 style="font-family:var(--serif);font-size:clamp(1.7rem,2.6vw,2.6rem);margin-bottom:.7rem">Therapy, supervision &amp; professional learning</h2>
+        <p style="color:var(--mid);font-size:.92rem;max-width:500px;margin:0 auto">Whether you are seeking personal support or developing your clinical practice as a therapist, there is a route for you.</p>
+      </div>
+      <div class="og">
+        <div class="oc" onclick="sp('therapy')"><div class="onum">01</div><h3>Individual &amp; Couples Therapy</h3><p>Confidential online therapy for individuals and couples — including relationship therapy, sex therapy and LGBTQIA+ affirming support.</p><div class="op">from £120 <span>/ session</span></div><div class="oa">Learn more</div></div>
+        <div class="oc" onclick="sp('therapy')"><div class="onum">02</div><h3>Couples Therapy Intensive</h3><p>A concentrated, immersive experience for couples who want to address relationship issues more quickly than weekly sessions.</p><div class="op">from £520 <span>/ package</span></div><div class="oa">Learn more</div></div>
+        <div class="oc" onclick="sp('supervision')"><div class="onum">03</div><h3>Clinical Supervision</h3><p>Individual and group supervision for qualified and trainee therapists, with specialist focus on couples, relationships and sex therapy.</p><div class="op">from £80 <span>/ month</span></div><div class="oa">Learn more</div></div>
+      </div>
+      <div class="og" style="margin-top:1px">
+        <div class="oc" onclick="sp('book')"><div class="onum" style="color:var(--sage);font-size:2rem">→</div><h3>Book a Session</h3><p>Ready to get started? Book directly into released availability for individual or couples therapy, or enquire about a couples intensive.</p><div class="op" style="font-size:.95rem;color:var(--muted)">New clients welcome</div><div class="oa">Book now</div></div>
+        <div class="oc" onclick="sp('therapists')"><div class="onum" style="color:var(--sage);font-size:2rem">→</div><h3>For Therapists</h3><p>Join the large group membership, apply for a small supervision group, or sign up to the mailing list for news and resources.</p><div class="op" style="font-size:.95rem;color:var(--muted)">Membership from £60/month</div><div class="oa">Explore</div></div>
+        <div class="oc" onclick="sp('contact')"><div class="onum" style="font-size:2rem;color:var(--border)">?</div><h3>Not sure where to start?</h3><p>Send me a message and I can help you find the right route. I aim to respond to all enquiries within 2 working days.</p><div class="op" style="font-size:.88rem;color:var(--muted)">claireratcliffetherapy@gmail.com</div><div class="oa">Get in touch</div></div>
+      </div>
+    </div>
+  </section>
+  <section class="os">
+    <div class="w"><div class="asp">
+      <div class="ai"><img src="https://images.squarespace-cdn.com/content/v1/624b503b5d73881124e70a24/1649102923989-HOTX3VP5FFBFQY94VTYO/Stocksy_comp_2793634.jpg" alt="Claire Ratcliffe" onerror="this.parentElement.style.background='var(--light)'"/></div>
+      <div>
+        <span class="lbl">About Claire</span>
+        <h2 style="font-family:var(--serif);font-size:clamp(1.55rem,2.3vw,2.3rem);margin-bottom:1rem">A specialist in relational and couples psychotherapy</h2>
+        <div class="dv"></div>
+        <p style="color:var(--mid);font-size:.9rem;line-height:1.88;margin-bottom:.8rem">I am deeply passionate about psychotherapy. It can be an empowering process, supporting you to reconnect with yourself, to notice and take care of your needs, bringing self-awareness, healing and a deeper sense of security.</p>
+        <p style="color:var(--mid);font-size:.9rem;line-height:1.88;margin-bottom:.8rem">UKCP-registered and trained in Transactional Analysis, Relational Psychotherapy, and a wide range of specialist couples, relationship and sex therapy approaches. I also provide clinical supervision for therapists in this area.</p>
+        <p style="color:var(--mid);font-size:.9rem;line-height:1.88;margin-bottom:1.5rem">Registered with WPA Insurance — please mention this in your enquiry if you hold a policy with them.</p>
+        <span class="btn bot" onclick="sp('about')">About me &amp; qualifications →</span>
+      </div>
+    </div></div>
+  </section>
+  <div class="qb"><blockquote>"The purpose of psychotherapy is to set people free."</blockquote><cite>— Rollo May</cite></div>
+  <footer><div class="w">
+    <div class="fi2">
+      <div class="fb2"><h3>Claire Ratcliffe Psychotherapy</h3><p>Confidential online therapy, supervision and professional learning for therapists working with couples and relationships.</p><p style="margin-top:1rem;font-size:.78rem">claireratcliffetherapy@gmail.com<br>07830 906822</p></div>
+      <div class="fc2"><h4>Therapy</h4><ul>
+        <li><a onclick="sp('therapy')">Individual Therapy</a></li>
+        <li><a onclick="sp('therapy')">Couples &amp; Relationship Therapy</a></li>
+        <li><a onclick="sp('therapy')">Sex Therapy</a></li>
+        <li><a onclick="sp('therapy')">LGBTQIA+ Affirming</a></li>
+        <li><a onclick="sp('therapy')">Couples Intensive</a></li>
+      </ul></div>
+      <div class="fc2"><h4>For Therapists</h4><ul>
+        <li><a onclick="sp('supervision')">Clinical Supervision</a></li>
+        <li><a onclick="sp('therapists');sht('groups')">Supervision Groups</a></li>
+        <li><a onclick="sp('therapists');sht('membership')">Group Membership</a></li>
+        <li><a onclick="sp('therapists');sht('mailing')">Mailing List</a></li>
+      </ul></div>
+      <div class="fc2"><h4>Information</h4><ul>
+        <li><a onclick="sp('book')">Book a Session</a></li>
+        <li><a onclick="sp('fees')">Fees</a></li>
+        <li><a onclick="sp('about')">About Me</a></li>
+        <li><a onclick="sp('contact')">Contact</a></li>
+        <li><a onclick="sp('faq')">FAQs</a></li>
+        <li><a onclick="sp('privacy')">Privacy Policy</a></li>
+        <li><a onclick="sp('terms')">Terms &amp; Conditions</a></li>
+      </ul></div>
+    </div>
+    <div class="fbo"><span>© 2025 Claire Ratcliffe Psychotherapy. All rights reserved.</span><span style="color:rgba(255,255,255,.3);font-size:.7rem">claireratcliffetherapy@gmail.com · 07830 906822</span></div>
+  </div></footer>
+</div>
+<!-- THERAPY (includes Couples Intensive) -->
+<div class="page" id="page-therapy">
+  <!-- Split hero with image -->
+  <div class="ih-split">
+    <div class="w" style="display:contents">
+      <div class="ih-split-l" style="padding-left:2rem;padding-right:2rem">
+        <span class="lbl">Individual, Couples &amp; Relationship Therapy</span>
+        <h1 style="font-size:clamp(2.1rem,3.5vw,3.4rem);margin:.35rem 0 1.1rem;font-family:var(--serif);font-weight:300;line-height:1.12">Online Therapy for<br><em style="font-style:italic;color:var(--sage)">Individuals &amp; Couples</em></h1>
+        <p style="font-size:.97rem;color:var(--mid);margin-bottom:1.7rem;line-height:1.88;max-width:520px">I offer psychotherapy, couples therapy, sex therapy and LGBTQIA+ affirming support — all online, available across the UK and internationally.</p>
+        <div style="display:flex;gap:.7rem;flex-wrap:wrap">
+          <span class="btn bdk" onclick="sp('book')">Book a session</span>
+          <span class="btn bot" onclick="sp('contact')">Ask a question</span>
+          <span class="btn bots" onclick="sid('therapy-faq')" style="font-size:.67rem">FAQs ↓</span>
+        </div>
+      </div>
+      <div class="ih-split-r"><img src="https://images.squarespace-cdn.com/content/v1/6817c0c8f248c61a7135f52a/1746550310055-3O3QZXOS3DZLFJ8FRSGU/unsplash-image-tkkAzITbfP8.jpg" alt="" onerror="this.style.background='var(--light)'"/></div>
+    </div>
+  </div>
+
+  <!-- Approach -->
+  <div class="w" style="padding:4.5rem 0 2rem">
+    <span class="lbl">My approach</span>
+    <h2 style="font-family:var(--serif);font-size:clamp(1.5rem,2.3vw,2.1rem);max-width:600px;margin-bottom:.8rem">Integrative, relational and trauma-informed</h2>
+    <p style="color:var(--mid);font-size:.92rem;max-width:660px;line-height:1.88;margin-bottom:2rem">I am deeply passionate about psychotherapy. It can be an empowering process, supporting you to reconnect with yourself, to notice and take care of your needs, and to bring self-awareness, healing and a deeper sense of security.</p>
+    <div class="apg">
+      <div class="apc"><h4>Transactional Analysis</h4><p>"Without awareness of our own life script, we are destined to repeat the same patterns."</p><cite>— Eric Berne</cite></div>
+      <div class="apc"><h4>Nervous System Regulation</h4><p>"When you bring safety to your nervous system, everything shifts. Your relationships deepen, your health improves, your energy returns."</p><cite>— Sarah Baldwin</cite></div>
+      <div class="apc"><h4>Relational Psychotherapy</h4><p>"The heart of relational psychotherapy is the healing that occurs when a person is fully seen, heard, and emotionally understood by another."</p><cite>— Richard Erskine</cite></div>
+      <div class="apc"><h4>Relationship &amp; Sex Therapy</h4><p>"A beautiful thing happens when we start paying attention to each other. It is by participating more in your relationship that you breathe life into it."</p><cite>— Steve Maraboli</cite></div>
+    </div>
+  </div>
+
+  <!-- Couples & relationship -->
+  <div class="os"><div class="w"><div class="tc">
+    <div class="pr">
+      <span class="lbl">Couples &amp; Relationship Therapy</span>
+      <h2>Space to reconnect — with yourself and each other</h2>
+      <div class="dv"></div>
+      <p>Relationship therapy allows you to work through issues in your current relationship, look at how past relationships may be affecting your current one, and explore ways of improving and strengthening your relationships in the future.</p>
+      <p>I believe my primary role is to help you improve your responses to each other without violating your integrity, core values or deeply held principles.</p>
+      <p>The major aim of relationship therapy is increasing your knowledge about yourself, your partner and the patterns of interaction between you. Therapy becomes effective as you apply new knowledge to break ineffective patterns and develop better ones.</p>
+      <p>I draw on the Developmental Model of Couples Therapy, Relational Life Therapy, and other integrative approaches.</p>
+      <br><span class="btn bot" onclick="sp('book')">Book a session</span>
+    </div>
+    <div><img src="https://images.squarespace-cdn.com/content/v1/6817c0c8f248c61a7135f52a/1746546257961-TO6OZ9P59EBSAMDPP4ZE/unsplash-image-fpoHihXiMhg.jpg" alt="" style="width:100%;aspect-ratio:3/4;object-fit:cover" onerror="this.style.background='var(--light)'"/></div>
+  </div></div></div>
+
+  <!-- Sex therapy -->
+  <div class="w"><div class="tc tcf" style="padding:5rem 0">
+    <div><img src="https://images.squarespace-cdn.com/content/v1/6817c0c8f248c61a7135f52a/1746549979477-95FVMEPWKJHVPKAF0XIZ/unsplash-image-0dXvugMScIY.jpg" alt="" style="width:100%;aspect-ratio:3/4;object-fit:cover" onerror="this.style.background='var(--light)'"/></div>
+    <div class="pr">
+      <span class="lbl">Sex Therapy</span>
+      <h2>A space for intimacy, desire and connection</h2>
+      <div class="dv"></div>
+      <p>I am trained in Assessing and Treating Sexual Issues in Psychotherapy and am part of an ongoing group to keep up to date with knowledge and training in this field.</p>
+      <p>Sex therapy is a space to explore challenges or questions around sex, intimacy, desire and connection, without judgement.</p>
+      <p style="font-weight:500;color:var(--charcoal)">People come to sex therapy for all kinds of reasons, including:</p>
+      <ul><li>Feeling disconnected from desire</li><li>Difficulties with arousal or orgasm</li><li>Pain or discomfort during sex</li><li>Navigating different libidos in your relationship</li><li>The impact of stress, shame, identity or trauma with sexuality</li><li>Wanting to reconnect with pleasure</li></ul>
+      <p style="margin-top:.8rem"><strong style="font-weight:500;color:var(--charcoal)">Other areas include:</strong> Desire discrepancy, vaginismus, vaginal atrophy, delayed/premature ejaculation, erectile dysfunction, and increasing sexual function and pleasure.</p>
+    </div>
+  </div></div>
+
+  <!-- LGBTQIA+ -->
+  <div class="ds"><div class="w"><div class="tc">
+    <div>
+      <span class="lbl">LGBTQIA+ Affirming Therapy</span>
+      <h2>Supporting connection, intimacy and authenticity</h2>
+      <div class="dv" style="background:rgba(255,255,255,.2)"></div>
+      <p>I offer a warm, affirming space for LGBTQ+ clients to explore who they are. Therapy can be a place to untangle shame, heal from rejection, and gently reconnect with the parts of you that may have been hidden or silenced.</p>
+      <p>Whether you are exploring your identity, navigating relationships, or simply longing to feel more at home in yourself, you are welcome here. Together we can work toward healing, self-trust, and the freedom that comes from truly embracing who you are.</p>
+      <div style="margin-top:1.3rem;padding:1.3rem;border:1px solid rgba(255,255,255,.12)"><p style="font-family:var(--serif);font-size:1.1rem;font-style:italic;color:var(--white);line-height:1.5">"To be yourself is a revolutionary act, and to make the choice to be authentically you is the most powerful choice you can make."</p><p style="font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-top:.4rem">— Laverne Cox</p></div>
+      <br><span class="btn botlt" onclick="sp('book')">Book a session</span>
+    </div>
+    <div>
+      <p style="font-size:.87rem;line-height:1.9;margin-bottom:1rem;color:rgba(255,255,255,.75)">Specialist training includes:</p>
+      <ul><li>Gender, Sexual and Relationship Diversity in Modern Relationships (COSRT)</li><li>Queer Relationships &amp; Queer Therapy (COSRT)</li><li>BDSM/Kink awareness</li><li>Transgender Awareness</li><li>Working with non-monogamous and polyamorous relationships</li><li>LGBTQ+ informed Supervision (certificate)</li></ul>
+      <div style="margin-top:1.8rem;padding:1.3rem;border:1px solid rgba(255,255,255,.12)"><p style="font-family:var(--serif);font-size:1.1rem;font-style:italic;color:var(--white);line-height:1.5">"We're all just looking for a place where we can be seen and loved for exactly who we are."</p><p style="font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-top:.4rem">— David Levithan</p></div>
+    </div>
+  </div></div></div>
+
+  <!-- Couples Intensive (merged) -->
+  <div class="w" style="padding:5rem 0">
+    <div style="border-top:2px solid var(--sage);padding-top:3rem;margin-bottom:3rem">
+      <span class="lbl">Couples Therapy Intensive</span>
+      <h2 style="font-family:var(--serif);font-size:clamp(1.5rem,2.3vw,2.2rem);margin-bottom:1rem">A concentrated, immersive experience for couples</h2>
+      <p style="color:var(--mid);font-size:.92rem;max-width:700px;line-height:1.88">For couples who want to address relationship issues more quickly than traditional weekly sessions. Available as 3-hour, 1-day, 2-day and 3-day packages, all online. <strong style="color:var(--charcoal)">Bookings are by enquiry only.</strong></p>
+    </div>
+    <div class="tc">
+      <div class="pr">
+        <p style="font-weight:500;color:var(--charcoal);margin-bottom:.5rem">Why choose an intensive?</p>
+        <ul><li>To develop effective ways of communicating</li><li>If there has been an infidelity or betrayal requiring immediate support</li><li>Deciding whether to stay in your relationship or work towards an end</li><li>Deciding if you would like to open up your relationship</li><li>Exploring sexual intimacy and creating more emotional depth</li></ul>
+        <div class="tb" style="margin-top:1.5rem"><h4>How it works</h4><ul><li>All intensives take place online via secure video.</li><li>Sessions can be consecutive or spread across weeks — we agree a schedule to suit you.</li><li>The 3-day package includes a 1-hour follow-up session two weeks after the final day.</li><li>Bookings are by enquiry — get in touch to discuss your needs and availability.</li></ul></div>
+        <br><span class="btn bdk" onclick="sp('book');sbt('intensive')">Enquire about an intensive →</span>
+      </div>
+      <div>
+        <span class="lbl" style="margin-bottom:1rem">Packages &amp; fees</span>
+        <div style="display:flex;flex-direction:column;gap:1px;background:var(--border)">
+          <div style="background:var(--white);padding:1.4rem"><div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.2rem"><h3 style="font-family:var(--serif);font-size:1.05rem">3 Hours</h3><span style="font-family:var(--serif);font-size:1.4rem;color:var(--sage)">£520</span></div><p style="font-size:.82rem;color:var(--mid)">Focused time to explore relationship issues in depth.</p></div>
+          <div style="background:var(--white);padding:1.4rem"><div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.2rem"><h3 style="font-family:var(--serif);font-size:1.05rem">1 Day</h3><span style="font-family:var(--serif);font-size:1.4rem;color:var(--sage)">£910</span></div><p style="font-size:.82rem;color:var(--mid)">A full day — consecutive or split across two weeks.</p></div>
+          <div style="background:var(--white);padding:1.4rem"><div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.2rem"><h3 style="font-family:var(--serif);font-size:1.05rem">2 Days</h3><span style="font-family:var(--serif);font-size:1.4rem;color:var(--sage)">£1,850</span></div><p style="font-size:.82rem;color:var(--mid)">Two full days — consecutive or over two weeks.</p></div>
+          <div style="background:var(--white);padding:1.4rem;border-top:2px solid var(--sage)"><div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.2rem"><h3 style="font-family:var(--serif);font-size:1.05rem">3 Days <span style="font-size:.68rem;font-family:var(--sans);text-transform:uppercase;letter-spacing:.08em;color:var(--muted)">+ follow-up</span></h3><span style="font-family:var(--serif);font-size:1.4rem;color:var(--sage)">£2,800</span></div><p style="font-size:.82rem;color:var(--mid)">Three days plus a 1-hour follow-up two weeks after the final day.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Therapy FAQs -->
+  <div class="os" id="therapy-faq" style="padding:4rem 0">
+    <div class="w">
+      <span class="lbl">Frequently asked questions</span>
+      <h2 style="font-family:var(--serif);font-size:clamp(1.4rem,2vw,1.9rem);margin-bottom:2rem">Therapy &amp; sessions</h2>
+      <div class="fi"><div class="fq" onclick="tf(this)">How do I know if therapy is right for me? <span class="fi-ico">+</span></div><div class="fa">Many people find that talking things through in a safe, non-judgemental space helps them gain perspective, process emotions and make changes. If you are unsure, you are welcome to get in touch and we can have a brief conversation before committing to anything.</div></div>
+      <div class="fi"><div class="fq" onclick="tf(this)">Do I need a referral to book? <span class="fi-ico">+</span></div><div class="fa">No. You can book directly via the booking page. New clients book into released availability — existing regular clients continue to use the current process.</div></div>
+      <div class="fi"><div class="fq" onclick="tf(this)">What happens in the first session? <span class="fi-ico">+</span></div><div class="fa">The first session is an opportunity for us to meet, for you to share a little about what has brought you to therapy, and for us to think together about what you are hoping to get from the work. There is no pressure to share more than you are ready to.</div></div>
+      <div class="fi"><div class="fq" onclick="tf(this)">What is the cancellation policy? <span class="fi-ico">+</span></div><div class="fa">48 hours' notice is required to cancel or reschedule a session. Cancellations with less than 48 hours' notice and non-attendance are charged at the full session rate.</div></div>
+      <div class="fi"><div class="fq" onclick="tf(this)">Are sessions recorded? <span class="fi-ico">+</span></div><div class="fa">No. Sessions are never recorded. You will be asked to confirm this at booking.</div></div>
+      <div class="fi"><div class="fq" onclick="tf(this)">Do you offer reduced fees? <span class="fi-ico">+</span></div><div class="fa">A small number of reduced fee spaces are reserved for those experiencing financial difficulty. These are limited and offered depending on individual circumstances and current availability. Please mention this in your enquiry.</div></div>
+      <div class="fi"><div class="fq" onclick="tf(this)">What is a couples intensive and how is it different from weekly sessions? <span class="fi-ico">+</span></div><div class="fa">A couples intensive is a concentrated block of therapy — from 3 hours to 3 days — that allows deeper work in a shorter timeframe. It suits couples who want to address something urgently, have limited time for weekly sessions, or want to accelerate progress. It is not a replacement for ongoing work in all cases, but can be a powerful standalone experience or starting point.</div></div>
+      <br><span class="btn bot" onclick="sp('faq')">View all FAQs →</span>
+    </div>
+  </div>
+
+  <div class="w" style="padding:3rem 0 2rem;text-align:center">
+    <div style="display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap"><span class="btn bdk" onclick="sp('book')">Book a session</span><span class="btn bot" onclick="sp('fees')">View all fees</span><span class="btn bot" onclick="sp('contact')">Get in touch</span></div>
+  </div>
+  <footer><div class="w"><div class="fbo" style="border-top:1px solid rgba(255,255,255,.1);padding-top:1.3rem"><span style="color:rgba(255,255,255,.4)">© 2025 Claire Ratcliffe Psychotherapy</span><span class="btn blt" style="font-size:.66rem" onclick="sp('home')">← Home</span></div></div></footer>
+</div>
+
+<!-- CLINICAL SUPERVISION -->
+<div class="page" id="page-supervision">
+  <!-- Split hero with image -->
+  <div class="ih-split">
+    <div class="w" style="display:contents">
+      <div class="ih-split-l" style="padding-left:2rem;padding-right:2rem">
+        <span class="lbl">For qualified &amp; trainee therapists</span>
+        <h1 style="font-size:clamp(2.1rem,3.5vw,3.4rem);margin:.35rem 0 1.1rem;font-family:var(--serif);font-weight:300;line-height:1.12">Clinical<br><em style="font-style:italic;color:var(--sage)">Supervision</em></h1>
+        <p style="font-size:.97rem;color:var(--mid);margin-bottom:1.7rem;line-height:1.88;max-width:520px">Supportive supervision for counsellors and psychotherapists working with individuals, couples and groups — drawing on Transactional Analysis, Relational Therapy and the Developmental Model for Couples Therapy.</p>
+        <div style="display:flex;gap:.7rem;flex-wrap:wrap">
+          <span class="btn bdk" onclick="sp('therapists');sht('groups')">Join a supervision group</span>
+          <span class="btn bot" onclick="sp('contact')">Enquire about individual supervision</span>
+          <span class="btn bots" onclick="sid('supervision-faq')" style="font-size:.67rem">FAQs ↓</span>
+        </div>
+      </div>
+      <div class="ih-split-r"><img src="https://images.squarespace-cdn.com/content/v1/624b503b5d73881124e70a24/1649102923989-HOTX3VP5FFBFQY94VTYO/Stocksy_comp_2793634.jpg" alt="" onerror="this.style.background='var(--light)'"/></div>
+    </div>
+  </div>
+
+  <div class="w"><div class="tc">
+    <div class="pr">
+      <span class="lbl">About my supervision</span>
+      <h2>Specialist supervision in couples and relationship work</h2>
+      <div class="dv"></div>
+      <p>I completed my Supervision training at The Manchester Institute for Psychotherapy in January 2015, with further training in Group Supervision and a certificate in LGBTQ+ informed Supervision.</p>
+      <p>I offer supervision for both qualified and student counsellors and psychotherapists, working with individuals, couples and groups. Experience across:</p>
+      <ul><li>Qualified therapists in private practice</li><li>Trainees on training courses and clinical placements</li><li>Practitioners working within the NHS</li><li>Individual and group supervision in drug and alcohol services</li><li>Group supervision within eating disorder services</li></ul>
+      <p style="margin-top:1rem">Supervision is not only for exploring client work but also for support for the practitioner's own wellbeing — including vicarious trauma, burnout, compassion fatigue, building your practice, and imposter syndrome.</p>
+      <p>A large part of my work is with couples, relationships and sex issues. I am consistently in ongoing training in this area and supervise many therapists who work with couples and relationships.</p>
+    </div>
+    <div>
+      <div class="pc" style="margin-bottom:1.2rem">
+        <span class="lbl">Individual supervision</span>
+        <h3>One-to-one</h3>
+        <div class="pb"><sup>£</sup>100</div>
+        <p class="pn">per hour</p>
+        <ul class="pf"><li>Qualified or trainee therapists</li><li>Individual, couples &amp; groups work</li><li>Private practice, placement or NHS</li><li>LGBTQ+ informed</li></ul>
+        <span class="btn bdk" style="width:100%;text-align:center;display:block" onclick="sp('contact')">Enquire</span>
+      </div>
+      <div style="background:var(--off);padding:1.6rem;border-top:2px solid var(--sage);border:1px solid var(--border);border-top:2px solid var(--sage)">
+        <span class="lbl">Group supervision</span>
+        <h3 style="font-family:var(--serif);font-size:1.1rem;margin-bottom:.4rem">Small Supervision Groups</h3>
+        <p style="font-size:.84rem;color:var(--mid);line-height:1.8;margin-bottom:1rem">Fixed 6-month online supervision groups for therapists working with couples and relationship clients. Maximum 6 participants, minimum 4 to run.</p>
+        <p style="font-size:.8rem;color:var(--muted);margin-bottom:1rem">From £80/month · 6-month commitment</p>
+        <span class="btn bots" style="width:100%;text-align:center;display:block;font-size:.68rem" onclick="sp('therapists');sht('groups')">View group details &amp; apply →</span>
+      </div>
+    </div>
+  </div></div>
+
+  <!-- Supervision FAQs -->
+  <div class="os" id="supervision-faq" style="padding:4rem 0">
+    <div class="w">
+      <span class="lbl">Frequently asked questions</span>
+      <h2 style="font-family:var(--serif);font-size:clamp(1.4rem,2vw,1.9rem);margin-bottom:2rem">Clinical supervision</h2>
+      <div class="fi"><div class="fq" onclick="tf(this)">What theoretical approach do you use in supervision? <span class="fi-ico">+</span></div><div class="fa">My supervision draws primarily on Transactional Analysis, Relational and Integrative approaches, and the Developmental Model for Couples Therapy. I am integrative and adapt to the needs of the supervisee and their client work.</div></div>
+      <div class="fi"><div class="fq" onclick="tf(this)">Do you supervise trainees? <span class="fi-ico">+</span></div><div class="fa">Yes. I supervise both qualified therapists and trainees across a range of courses and placements. Please get in touch to discuss your specific training requirements.</div></div>
+      <div class="fi"><div class="fq" onclick="tf(this)">What is the difference between individual and group supervision? <span class="fi-ico">+</span></div><div class="fa">Individual supervision is one-to-one and allows a depth of focus on your specific client work and professional development. Group supervision offers peer reflection and community alongside clinical discussion, within a small, confidential group of 4–6 therapists. Both are available.</div></div>
+      <div class="fi"><div class="fq" onclick="tf(this)">I work with couples — do I need specialist supervision? <span class="fi-ico">+</span></div><div class="fa">While not always mandatory, specialist supervision for couples work is strongly recommended. Couples therapy presents unique dynamics not always covered in generalist supervision — working with a supervisor who has specific training and experience in this area can make a significant difference to your practice.</div></div>
+      <br><span class="btn bot" onclick="sp('faq')">View all FAQs →</span>
+    </div>
+  </div>
+  <footer><div class="w"><div class="fbo" style="border-top:1px solid rgba(255,255,255,.1);padding-top:1.3rem"><span style="color:rgba(255,255,255,.4)">© 2025 Claire Ratcliffe Psychotherapy</span><span class="btn blt" style="font-size:.66rem" onclick="sp('home')">← Home</span></div></div></footer>
+</div>
+<!-- BOOK A SESSION — simplified single dropdown -->
+<div class="page" id="page-book">
+  <div class="ih"><div class="w"><div class="ih-c">
+    <span class="lbl">New clients — released availability</span>
+    <h1>Book a<br><em>Session</em></h1>
+    <p>Select the type of session you would like to book below. Existing regular clients should continue to use the current booking process. Payment is required at booking for all individual and couples sessions.</p>
+  </div></div></div>
+  <div class="w">
+    <div class="bk-wrap">
+      <div class="bk-select-wrap">
+        <label for="sessionType">What type of session would you like to book?</label>
+        <select class="bk-type" id="sessionType" onchange="showBookPanel(this.value)">
+          <option value="">— Select a session type —</option>
+          <option value="ind-day">Individual therapy — weekday daytime (50 min · £120)</option>
+          <option value="ind-eve">Individual therapy — evening or weekend (50 min · £135)</option>
+          <option value="cpl-60d">Couples therapy — 60 min daytime (£165)</option>
+          <option value="cpl-90d">Couples therapy — 90 min daytime (£240)</option>
+          <option value="cpl-60e">Couples therapy — 60 min evening/weekend (£185)</option>
+          <option value="cpl-90e">Couples therapy — 90 min evening/weekend (£270)</option>
+          <option value="intensive">Couples intensive — enquiry (from £520)</option>
+        </select>
+      </div>
+
+      <!-- Individual panels -->
+      <div class="bk-panel" id="bk-ind-day">
+        <div class="bk-grid">
+          <div>
+            <span class="lbl">Individual therapy · Weekday daytime</span>
+            <h2 style="font-family:var(--serif);font-size:clamp(1.4rem,2vw,1.8rem);margin-bottom:.5rem">50-minute session · <span style="color:var(--sage)">£120</span></h2>
+            <div class="dv"></div>
+            <div class="tb"><h4>Booking terms</h4><ul><li>Payment required at booking via Stripe.</li><li>48 hours' notice required to cancel or reschedule.</li><li>Late cancellations charged in full.</li><li>Session held via Zoom — link sent with confirmation.</li><li>Attend from a private space with no one else present.</li><li>Sessions are not recorded.</li></ul></div>
+            <div class="acuity-placeholder"><p>📅 Acuity Scheduling will be embedded here — clients select their date and time directly from your live availability.</p></div>
+          </div>
+          <div><div class="fp">
+            <p style="font-size:.84rem;color:var(--mid);margin-bottom:1.4rem;line-height:1.8">Complete your details below alongside your date and time selection.</p>
+            <div class="fr"><div class="fg"><label>First name *</label><input type="text"/></div><div class="fg"><label>Last name *</label><input type="text"/></div></div>
+            <div class="fg"><label>Email *</label><input type="email"/></div>
+            <div class="fg"><label>Phone</label><input type="tel"/></div>
+            <div class="fg"><label>Emergency contact</label><input type="text"/></div>
+            <div class="fg"><label>What brings you to therapy? (optional)</label><textarea placeholder="A few sentences — this won't limit what we explore."></textarea></div>
+            <p class="dh">Please confirm</p>
+            <div class="cbg">
+              <div class="ci"><input type="checkbox" id="ia1" required><label for="ia1">I will attend from a private space with no one else present.</label></div>
+              <div class="ci"><input type="checkbox" id="ia2" required><label for="ia2">I will not record the session.</label></div>
+              <div class="ci"><input type="checkbox" id="ia3" required><label for="ia3">I accept the 48-hour cancellation policy — late cancellations charged in full.</label></div>
+              <div class="ci"><input type="checkbox" id="ia4" required><label for="ia4">I agree to the terms, privacy notice and online session rules.</label></div>
+            </div>
+            <div class="cr"><input type="checkbox" id="ia5"><label for="ia5">I would like to receive marketing updates from Claire Ratcliffe Psychotherapy.</label></div>
+            <p class="fn">Payment via Stripe. Receipts issued automatically. GDPR compliant.</p>
+            <br><button class="btn bdk" onclick="validateAndSubmit(this,'Your booking has been received. You will be sent a Stripe payment link and Zoom confirmation by email.')">Confirm booking →</button>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="bk-panel" id="bk-ind-eve">
+        <div class="bk-grid">
+          <div>
+            <span class="lbl">Individual therapy · Evening or weekend</span>
+            <h2 style="font-family:var(--serif);font-size:clamp(1.4rem,2vw,1.8rem);margin-bottom:.5rem">50-minute session · <span style="color:var(--sage)">£135</span></h2>
+            <div class="dv"></div>
+            <div class="tb"><h4>Booking terms</h4><ul><li>Payment required at booking via Stripe.</li><li>48 hours' notice required to cancel or reschedule.</li><li>Late cancellations charged in full.</li><li>Session held via Zoom — link sent with confirmation.</li><li>Attend from a private space with no one else present.</li><li>Sessions are not recorded.</li></ul></div>
+            <div class="acuity-placeholder"><p>📅 Acuity Scheduling embedded here — clients select from live evening and weekend availability.</p></div>
+          </div>
+          <div><div class="fp">
+            <div class="fr"><div class="fg"><label>First name *</label><input type="text"/></div><div class="fg"><label>Last name *</label><input type="text"/></div></div>
+            <div class="fg"><label>Email *</label><input type="email"/></div>
+            <div class="fg"><label>Phone</label><input type="tel"/></div>
+            <div class="fg"><label>Emergency contact</label><input type="text"/></div>
+            <div class="fg"><label>What brings you to therapy? (optional)</label><textarea></textarea></div>
+            <p class="dh">Please confirm</p>
+            <div class="cbg">
+              <div class="ci"><input type="checkbox" id="ib1" required><label for="ib1">I will attend from a private space with no one else present.</label></div>
+              <div class="ci"><input type="checkbox" id="ib2" required><label for="ib2">I will not record the session.</label></div>
+              <div class="ci"><input type="checkbox" id="ib3" required><label for="ib3">I accept the 48-hour cancellation policy.</label></div>
+              <div class="ci"><input type="checkbox" id="ib4" required><label for="ib4">I agree to the terms, privacy notice and online session rules.</label></div>
+            </div>
+            <div class="cr"><input type="checkbox" id="ib5"><label for="ib5">I would like to receive marketing updates from Claire Ratcliffe Psychotherapy.</label></div>
+            <p class="fn">Payment via Stripe. GDPR compliant.</p>
+            <br><button class="btn bdk" onclick="validateAndSubmit(this,'Your booking has been received. You will be sent a Stripe payment link and Zoom confirmation by email.')">Confirm booking →</button>
+          </div></div>
+        </div>
+      </div>
+
+      <!-- Couples panels — one template per type -->
+      <div class="bk-panel" id="bk-cpl-60d"><div class="bk-grid">
+        <div>
+          <span class="lbl">Couples therapy · 60 min daytime</span>
+          <h2 style="font-family:var(--serif);font-size:clamp(1.4rem,2vw,1.8rem);margin-bottom:.5rem">60-minute session · <span style="color:var(--sage)">£165</span></h2>
+          <div class="dv"></div>
+          <div class="tb"><h4>Booking terms</h4><ul><li>Payment required at booking.</li><li>48 hours' notice to cancel or reschedule.</li><li>Both partners attend from a private space together.</li><li>Sessions are not recorded.</li></ul></div>
+          <div class="acuity-placeholder"><p>📅 Acuity Scheduling embedded here — select from live daytime availability.</p></div>
+        </div>
+        <div><div class="fp">
+          <div class="fr"><div class="fg"><label>Your first name *</label><input type="text"/></div><div class="fg"><label>Your last name *</label><input type="text"/></div></div>
+          <div class="fr"><div class="fg"><label>Partner's first name</label><input type="text"/></div><div class="fg"><label>Partner's last name</label><input type="text"/></div></div>
+          <div class="fg"><label>Email *</label><input type="email"/></div>
+          <div class="fg"><label>Phone</label><input type="tel"/></div>
+          <div class="fg"><label>Emergency contact</label><input type="text"/></div>
+          <div class="fg"><label>What brings you to therapy? (optional)</label><textarea></textarea></div>
+          <p class="dh">Please confirm</p>
+          <div class="cbg">
+            <div class="ci"><input type="checkbox" id="ca1" required><label for="ca1">We will attend from a private space together.</label></div>
+            <div class="ci"><input type="checkbox" id="ca2" required><label for="ca2">We will not record the session.</label></div>
+            <div class="ci"><input type="checkbox" id="ca3" required><label for="ca3">We accept the 48-hour cancellation policy.</label></div>
+            <div class="ci"><input type="checkbox" id="ca4" required><label for="ca4">We agree to the terms, privacy notice and online session rules.</label></div>
+          </div>
+          <div class="cr"><input type="checkbox" id="ca5"><label for="ca5">I would like to receive marketing updates from Claire Ratcliffe Psychotherapy.</label></div>
+          <p class="fn">Payment via Stripe. Receipts issued automatically. GDPR compliant.</p>
+          <br><button class="btn bdk" onclick="validateAndSubmit(this,'Your booking has been received. You will be sent a Stripe payment link and Zoom confirmation by email.')">Confirm booking →</button>
+        </div></div>
+      </div></div>
+
+      <div class="bk-panel" id="bk-cpl-90d"><div class="bk-grid">
+        <div><span class="lbl">Couples therapy · 90 min daytime</span><h2 style="font-family:var(--serif);font-size:clamp(1.4rem,2vw,1.8rem);margin-bottom:.5rem">90-minute session · <span style="color:var(--sage)">£240</span></h2><div class="dv"></div><div class="acuity-placeholder"><p>📅 Acuity Scheduling embedded here.</p></div></div>
+        <div><div class="fp"><div class="fr"><div class="fg"><label>Your first name *</label><input type="text"/></div><div class="fg"><label>Your last name *</label><input type="text"/></div></div><div class="fr"><div class="fg"><label>Partner's first name</label><input type="text"/></div><div class="fg"><label>Partner's last name</label><input type="text"/></div></div><div class="fg"><label>Email *</label><input type="email"/></div><div class="fg"><label>Phone</label><input type="tel"/></div><div class="fg"><label>What brings you to therapy? (optional)</label><textarea></textarea></div><p class="dh">Please confirm</p><div class="cbg"><div class="ci"><input type="checkbox" id="cb1" required><label for="cb1">We will attend from a private space together.</label></div><div class="ci"><input type="checkbox" id="cb2" required><label for="cb2">We will not record the session.</label></div><div class="ci"><input type="checkbox" id="cb3" required><label for="cb3">We accept the 48-hour cancellation policy.</label></div><div class="ci"><input type="checkbox" id="cb4" required><label for="cb4">We agree to the terms, privacy notice and online session rules.</label></div></div><div class="cr"><input type="checkbox" id="cb5"><label for="cb5">I would like to receive marketing updates.</label></div><p class="fn">Payment via Stripe. GDPR compliant.</p><br><button class="btn bdk" onclick="validateAndSubmit(this,'Your booking has been received. You will be sent a Stripe payment link and Zoom confirmation by email.')">Confirm booking →</button></div></div>
+      </div></div>
+
+      <div class="bk-panel" id="bk-cpl-60e"><div class="bk-grid">
+        <div><span class="lbl">Couples therapy · 60 min evening/weekend</span><h2 style="font-family:var(--serif);font-size:clamp(1.4rem,2vw,1.8rem);margin-bottom:.5rem">60-minute session · <span style="color:var(--sage)">£185</span></h2><div class="dv"></div><div class="acuity-placeholder"><p>📅 Acuity Scheduling embedded here — evening and weekend slots.</p></div></div>
+        <div><div class="fp"><div class="fr"><div class="fg"><label>Your first name *</label><input type="text"/></div><div class="fg"><label>Your last name *</label><input type="text"/></div></div><div class="fr"><div class="fg"><label>Partner's first name</label><input type="text"/></div><div class="fg"><label>Partner's last name</label><input type="text"/></div></div><div class="fg"><label>Email *</label><input type="email"/></div><div class="fg"><label>Phone</label><input type="tel"/></div><div class="fg"><label>What brings you to therapy? (optional)</label><textarea></textarea></div><p class="dh">Please confirm</p><div class="cbg"><div class="ci"><input type="checkbox" id="cc1" required><label for="cc1">We will attend from a private space together.</label></div><div class="ci"><input type="checkbox" id="cc2" required><label for="cc2">We will not record the session.</label></div><div class="ci"><input type="checkbox" id="cc3" required><label for="cc3">We accept the 48-hour cancellation policy.</label></div><div class="ci"><input type="checkbox" id="cc4" required><label for="cc4">We agree to the terms, privacy notice and online session rules.</label></div></div><div class="cr"><input type="checkbox" id="cc5"><label for="cc5">I would like to receive marketing updates.</label></div><p class="fn">Payment via Stripe. GDPR compliant.</p><br><button class="btn bdk" onclick="validateAndSubmit(this,'Your booking has been received. You will be sent a Stripe payment link and Zoom confirmation by email.')">Confirm booking →</button></div></div>
+      </div></div>
+
+      <div class="bk-panel" id="bk-cpl-90e"><div class="bk-grid">
+        <div><span class="lbl">Couples therapy · 90 min evening/weekend</span><h2 style="font-family:var(--serif);font-size:clamp(1.4rem,2vw,1.8rem);margin-bottom:.5rem">90-minute session · <span style="color:var(--sage)">£270</span></h2><div class="dv"></div><div class="acuity-placeholder"><p>📅 Acuity Scheduling embedded here — evening and weekend slots.</p></div></div>
+        <div><div class="fp"><div class="fr"><div class="fg"><label>Your first name *</label><input type="text"/></div><div class="fg"><label>Your last name *</label><input type="text"/></div></div><div class="fr"><div class="fg"><label>Partner's first name</label><input type="text"/></div><div class="fg"><label>Partner's last name</label><input type="text"/></div></div><div class="fg"><label>Email *</label><input type="email"/></div><div class="fg"><label>Phone</label><input type="tel"/></div><div class="fg"><label>What brings you to therapy? (optional)</label><textarea></textarea></div><p class="dh">Please confirm</p><div class="cbg"><div class="ci"><input type="checkbox" id="cd1" required><label for="cd1">We will attend from a private space together.</label></div><div class="ci"><input type="checkbox" id="cd2" required><label for="cd2">We will not record the session.</label></div><div class="ci"><input type="checkbox" id="cd3" required><label for="cd3">We accept the 48-hour cancellation policy.</label></div><div class="ci"><input type="checkbox" id="cd4" required><label for="cd4">We agree to the terms, privacy notice and online session rules.</label></div></div><div class="cr"><input type="checkbox" id="cd5"><label for="cd5">I would like to receive marketing updates.</label></div><p class="fn">Payment via Stripe. GDPR compliant.</p><br><button class="btn bdk" onclick="validateAndSubmit(this,'Your booking has been received. You will be sent a Stripe payment link and Zoom confirmation by email.')">Confirm booking →</button></div></div>
+      </div></div>
+
+      <!-- Intensive enquiry -->
+      <div class="bk-panel" id="bk-intensive"><div class="bk-grid">
+        <div>
+          <span class="lbl">Couples intensive — enquiry</span>
+          <h2 style="font-family:var(--serif);font-size:clamp(1.4rem,2vw,1.8rem);margin-bottom:.5rem">Bookings by enquiry only</h2>
+          <div class="dv"></div>
+          <p style="font-size:.88rem;color:var(--mid);line-height:1.88;margin-bottom:1.2rem">I will be in touch within 2 working days to discuss your needs, confirm availability and agree a schedule.</p>
+          <ul class="fee-list">
+            <li><span>3 hours</span><span>£520</span></li>
+            <li><span>1 day</span><span>£910</span></li>
+            <li><span>2 days</span><span>£1,850</span></li>
+            <li><span>3 days + follow-up</span><span>£2,800</span></li>
+          </ul>
+        </div>
+        <div><div class="fp">
+          <div class="fr"><div class="fg"><label>Your first name *</label><input type="text"/></div><div class="fg"><label>Your last name *</label><input type="text"/></div></div>
+          <div class="fr"><div class="fg"><label>Partner's first name</label><input type="text"/></div><div class="fg"><label>Partner's last name</label><input type="text"/></div></div>
+          <div class="fg"><label>Email *</label><input type="email"/></div>
+          <div class="fg"><label>Phone</label><input type="tel"/></div>
+          <div class="fg"><label>Package of interest</label><select><option value="">Please select</option><option>3 hours — £520</option><option>1 day — £910</option><option>2 days — £1,850</option><option>3 days (inc. follow-up) — £2,800</option><option>Not sure yet</option></select></div>
+          <div class="fg"><label>What brings you to therapy? (optional)</label><textarea></textarea></div>
+          <div class="cr"><input type="checkbox" id="in1"><label for="in1">I would like to receive marketing updates from Claire Ratcliffe Psychotherapy.</label></div>
+          <p class="fn">Data processed in accordance with GDPR and our privacy notice.</p>
+          <br><button class="btn bdk" onclick="validateAndSubmit(this,'Your intensive enquiry has been received. I will be in touch within 2 working days.')">Send enquiry →</button>
+        </div></div>
+      </div></div>
+
+    </div><!-- end bk-wrap -->
+  </div>
+  <footer><div class="w"><div class="fbo" style="border-top:1px solid rgba(255,255,255,.1);padding-top:1.3rem"><span style="color:rgba(255,255,255,.4)">© 2025 Claire Ratcliffe Psychotherapy</span><span class="btn blt" style="font-size:.66rem" onclick="sp('home')">← Home</span></div></div></footer>
+</div>
+<!-- FOR THERAPISTS HUB -->
+<div class="page" id="page-therapists">
+  <div class="ih ih-dk"><div class="w"><div class="ih-c">
+    <span class="lbl">Professional development &amp; community</span>
+    <h1>For<br><em>Therapists</em></h1>
+    <p>Join the large group membership, apply for a small supervision group, or sign up to the mailing list — all designed for therapists working with couples and relationships.</p>
+  </div></div></div>
+  <div class="ht" id="hubTabs">
+    <div class="htb active" id="ht-membership" onclick="sht('membership',this)"><span>Large Group Membership</span></div>
+    <div class="htb" id="ht-groups" onclick="sht('groups',this)"><span>Small Supervision Groups</span></div>
+    <div class="htb" id="ht-mailing" onclick="sht('mailing',this)"><span>Mailing List</span></div>
+  </div>
+
+  <!-- MEMBERSHIP -->
+  <div class="hp active" id="hp-membership">
+    <div class="w"><div class="tc" style="padding-top:4rem">
+      <div class="pr">
+        <span class="lbl">Large Group Membership</span>
+        <h2>Live sessions, education &amp; community</h2>
+        <div class="dv"></div>
+        <p>A rolling monthly membership for therapists who want regular, accessible learning and peer connection — without a heavy time commitment.</p>
+        <ul><li>2 live online sessions per month (not recorded)</li><li>10 pre-recorded educational videos and resources from launch</li><li>New member-only content added weekly</li><li>A supportive community of therapists in this area of practice</li><li>Rolling monthly — cancel with the agreed notice period</li></ul>
+        <div class="tb"><h4>Important terms</h4><ul><li>Live sessions are not recorded</li><li>Pre-recorded content is separate from live sessions</li><li>Content access ends when membership ends</li><li>Educational content is not a substitute for supervision, therapy or clinical advice</li></ul></div>
+        <div style="padding:3rem 0 1rem">
+          <h3 style="font-family:var(--serif);font-size:1.4rem;margin-bottom:1.5rem">Frequently asked questions</h3>
+          <div class="fi"><div class="fq" onclick="tf(this)">Are the live sessions recorded? <span class="fi-ico">+</span></div><div class="fa">No. Live sessions are never recorded. This protects the confidentiality of all members. Pre-recorded educational content is separate and always available.</div></div>
+          <div class="fi"><div class="fq" onclick="tf(this)">Can I cancel my membership? <span class="fi-ico">+</span></div><div class="fa">Yes. This is a rolling monthly membership. Cancel with the agreed notice period. Content access ends at the end of your final paid month.</div></div>
+          <div class="fi"><div class="fq" onclick="tf(this)">Can trainee therapists join? <span class="fi-ico">+</span></div><div class="fa">Yes. Open to qualified and trainee therapists. Please ensure you have the support of your supervisor and training programme before joining.</div></div>
+          <div class="fi"><div class="fq" onclick="tf(this)">What educational content is included? <span class="fi-ico">+</span></div><div class="fa">At launch there are 10 pre-recorded educational videos covering key themes in couples and relationship therapy. New content added weekly. Not a substitute for individual supervision or clinical advice.</div></div>
+        </div>
+      </div>
+      <div>
+        <div class="pc" style="border-color:var(--sage);margin-bottom:1.2rem">
+          <span class="lbl">Membership fee</span>
+          <h3>Rolling monthly</h3>
+          <div class="pb"><sup>£</sup>60</div>
+          <p class="pn">per month — cancel with agreed notice</p>
+          <ul class="pf"><li>2 live sessions per month</li><li>10+ pre-recorded resources</li><li>Weekly new content</li><li>Full community access</li><li>No long-term commitment</li></ul>
+          <span class="btn bsg" style="width:100%;text-align:center;display:block" onclick="sid('mem-form')">Join now — £60/month</span>
+        </div>
+        <div style="background:var(--off);padding:1.4rem;border:1px solid var(--border)">
+          <span class="lbl">Who is this for?</span>
+          <p style="font-size:.84rem;color:var(--mid);line-height:1.8">For qualified and trainee therapists who work with couples and relationship clients and want ongoing learning without a long-term commitment.</p>
+        </div>
+      </div>
+    </div></div>
+    <div style="background:var(--off);padding:5rem 0;border-top:1px solid var(--border)" id="mem-form">
+      <div class="w"><div style="max-width:620px">
+        <span class="lbl">Join the membership</span>
+        <h2 style="font-family:var(--serif);font-size:clamp(1.5rem,2.2vw,2rem);margin-bottom:.4rem">Register &amp; set up payment</h2>
+        <p style="font-size:.87rem;color:var(--mid);margin-bottom:1.8rem">Complete the form below. You will be directed to Stripe to complete your £60/month payment.</p>
+        <div class="fr"><div class="fg"><label>First name *</label><input type="text"/></div><div class="fg"><label>Last name *</label><input type="text"/></div></div>
+        <div class="fg"><label>Email *</label><input type="email"/></div>
+        <div class="fg"><label>Phone</label><input type="tel"/></div>
+        <div class="fg"><label>Professional body</label><input type="text" placeholder="e.g. UKCP, BACP, COSRT"/></div>
+        <div class="fg"><label>Membership / registration number</label><input type="text"/></div>
+        <div class="fg"><label>Years in practice</label><select><option value="">Please select</option><option>Trainee / 0–1 years</option><option>1–3 years</option><option>3–5 years</option><option>5–10 years</option><option>10+ years</option></select></div>
+        <p class="dh">Declarations — please confirm all of the following</p>
+        <div class="cbg">
+          <div class="ci"><input type="checkbox" id="m1" required><label for="m1">I will attend from a private space with no one else present.</label></div>
+          <div class="ci"><input type="checkbox" id="m2" required><label for="m2">I will not record any live sessions.</label></div>
+          <div class="ci"><input type="checkbox" id="m3" required><label for="m3">I will not share other participants' information outside the group.</label></div>
+          <div class="ci"><input type="checkbox" id="m4" required><label for="m4">I understand live sessions are not recorded.</label></div>
+          <div class="ci"><input type="checkbox" id="m5" required><label for="m5">I understand content access ends when my membership ends.</label></div>
+          <div class="ci"><input type="checkbox" id="m6" required><label for="m6">I understand educational content is not a substitute for supervision, therapy or clinical advice.</label></div>
+          <div class="ci"><input type="checkbox" id="m7" required><label for="m7">I accept the cancellation and membership terms.</label></div>
+          <div class="ci"><input type="checkbox" id="m8" required><label for="m8">I am a qualified or trainee therapist with appropriate professional support in place.</label></div>
+        </div>
+        <div class="cr"><input type="checkbox" id="m9"><label for="m9">I would like to receive marketing emails from Claire Ratcliffe Psychotherapy.</label></div>
+        <p class="fn">By submitting you agree to our privacy notice and membership terms. GDPR compliant.</p>
+        <br><button class="btn bsg" onclick="validateAndSubmit(this,'Your membership registration has been received. You will receive a Stripe payment link by email shortly.')">Register &amp; proceed to payment →</button>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- SUPERVISION GROUPS -->
+  <div class="hp" id="hp-groups">
+    <div class="w"><div class="tc" style="padding-top:4rem">
+      <div class="pr">
+        <span class="lbl">Small Supervision Groups</span>
+        <h2>Small, focused and deeply relational</h2>
+        <div class="dv"></div>
+        <p>Fixed 6-month online supervision groups for therapists working with couples and relationship clients. Maximum 6 participants — the small size allows for the depth of reflection that good supervision requires.</p>
+        <ul><li>2 live online sessions per month</li><li>1.5–2 hours per session</li><li>Maximum 6 participants per group</li><li>Minimum 4 participants required to run</li><li>Fixed 6-month commitment</li><li>Sessions are not recorded</li></ul>
+        <div class="ab"><h4>6-month financial commitment</h4><p>Please read carefully. These groups run on a fixed 6-month block, not a rolling subscription.</p><ul><li>Once you join, you are committing to the full 6-month cost.</li><li>The monthly payment option is a payment plan only — not cancellable.</li><li>If you stop attending, cancel or change your mind, the full fee remains payable.</li><li>Missed sessions are not refunded and do not roll over.</li></ul></div>
+        <div class="tb"><h4>Confidentiality &amp; group rules</h4><ul><li>All members agree to confidentiality within the group.</li><li>Attend from a private space with no one else present.</li><li>Do not record any sessions.</li><li>Do not share other participants' information outside the group.</li><li>No client-led cancellation or rescheduling of sessions.</li></ul></div>
+        <div style="padding:3rem 0 1rem">
+          <h3 style="font-family:var(--serif);font-size:1.4rem;margin-bottom:1.5rem">Frequently asked questions</h3>
+          <div class="fi"><div class="fq" onclick="tf(this)">Can I cancel part-way through? <span class="fi-ico">+</span></div><div class="fa">No. The full fee remains payable once you confirm your place, regardless of attendance. Please only apply if you can commit to the full 6 months.</div></div>
+          <div class="fi"><div class="fq" onclick="tf(this)">What's the difference between the payment options? <span class="fi-ico">+</span></div><div class="fa">Both cover the same 6 months. The monthly plan (£80 × 6) spreads the cost but is a payment plan, not cancellable — you are committing to £480 from the start. Paying upfront (£440) saves £40.</div></div>
+          <div class="fi"><div class="fq" onclick="tf(this)">What if the group doesn't reach the minimum? <span class="fi-ico">+</span></div><div class="fa">A minimum of 4 participants is required. If this isn't reached you will be offered a place in the next group or a full refund.</div></div>
+          <div class="fi"><div class="fq" onclick="tf(this)">Are sessions recorded? <span class="fi-ico">+</span></div><div class="fa">No. Sessions are never recorded. This protects the confidentiality of all participants and the clinical material discussed.</div></div>
+        </div>
+      </div>
+      <div>
+        <span class="lbl" style="margin-bottom:1rem">Payment options</span>
+        <div class="pc dk" style="margin-bottom:1.2rem">
+          <h3>Monthly plan</h3>
+          <div class="pb"><sup>£</sup>80</div>
+          <p class="pn">per month × 6 · Total £480</p>
+          <ul class="pf"><li>Spread over 6 months</li><li>Payment plan — not cancellable</li><li>Full £480 commitment from day one</li></ul>
+          <span class="btn bdk" style="width:100%;text-align:center;display:block;font-size:.68rem" onclick="sid('grp-form')">Apply</span>
+        </div>
+        <div class="pc" style="margin-bottom:1.2rem">
+          <h3>Upfront — save £40</h3>
+          <div class="pb"><sup>£</sup>440</div>
+          <p class="pn">full 6-month block · save £40</p>
+          <ul class="pf"><li>Single payment</li><li>£40 saving</li><li>Full 6 months covered</li></ul>
+          <span class="btn bdk" style="width:100%;text-align:center;display:block;font-size:.68rem" onclick="sid('grp-form')">Apply</span>
+        </div>
+        <div style="background:var(--off);padding:1.4rem;border:1px solid var(--border)">
+          <span class="lbl">Group full?</span>
+          <p style="font-size:.84rem;color:var(--mid);line-height:1.8;margin-bottom:1rem">Join the waiting list and you will be notified when a space becomes available.</p>
+          <span class="btn bots" style="width:100%;text-align:center;display:block;font-size:.68rem" onclick="sid('wait-form')">Join waiting list →</span>
+        </div>
+      </div>
+    </div></div>
+    <div style="background:var(--off);padding:5rem 0;border-top:1px solid var(--border)" id="grp-form">
+      <div class="w"><div style="max-width:620px">
+        <span class="lbl">Apply to join</span>
+        <h2 style="font-family:var(--serif);font-size:clamp(1.5rem,2.2vw,2rem);margin-bottom:.4rem">Supervision group application</h2>
+        <p style="font-size:.87rem;color:var(--mid);margin-bottom:1.8rem">You will receive confirmation and payment details once your application is reviewed. Please read the 6-month commitment carefully before applying.</p>
+        <div class="fr"><div class="fg"><label>First name *</label><input type="text"/></div><div class="fg"><label>Last name *</label><input type="text"/></div></div>
+        <div class="fg"><label>Address *</label><input type="text"/></div>
+        <div class="fr"><div class="fg"><label>Town / City</label><input type="text"/></div><div class="fg"><label>Postcode</label><input type="text"/></div></div>
+        <div class="fg"><label>Email *</label><input type="email"/></div>
+        <div class="fg"><label>Phone *</label><input type="tel"/></div>
+        <div class="fg"><label>Emergency contact</label><input type="text"/></div>
+        <div class="fg"><label>Professional body *</label><input type="text" placeholder="e.g. UKCP, BACP, COSRT"/></div>
+        <div class="fg"><label>Membership / registration number *</label><input type="text"/></div>
+        <div class="fg"><label>Qualification level</label><input type="text" placeholder="e.g. Diploma, MSc, PG Cert"/></div>
+        <div class="fg"><label>Years in practice</label><select><option value="">Please select</option><option>Trainee</option><option>0–1 years</option><option>1–3 years</option><option>3–5 years</option><option>5–10 years</option><option>10+ years</option></select></div>
+        <div class="fg"><label>Insurance provider &amp; policy number</label><input type="text"/></div>
+        <div class="fg"><label>Preferred payment option</label><select><option value="">Please select</option><option>£80/month × 6 (payment plan — total £480)</option><option>£440 upfront (save £40)</option></select></div>
+        <div class="fg"><label>About your couples / relationship work</label><textarea placeholder="A few lines about your current or planned work in this area..."></textarea></div>
+        <p class="dh">Declarations — please confirm all of the following</p>
+        <div class="cbg">
+          <div class="ci"><input type="checkbox" id="s1" required><label for="s1">I will attend from a private space with no one else present.</label></div>
+          <div class="ci"><input type="checkbox" id="s2" required><label for="s2">I will not record any sessions.</label></div>
+          <div class="ci"><input type="checkbox" id="s3" required><label for="s3">I will not share other participants' information outside the group.</label></div>
+          <div class="ci"><input type="checkbox" id="s4" required><label for="s4">I understand that live sessions are not recorded.</label></div>
+          <div class="ci"><input type="checkbox" id="s5" required><label for="s5">I understand this is a 6-month financial commitment.</label></div>
+          <div class="ci"><input type="checkbox" id="s6" required><label for="s6">I understand the monthly option is a payment plan only — not cancellable — and the full fee is payable once I confirm my place.</label></div>
+          <div class="ci"><input type="checkbox" id="s7" required><label for="s7">I accept the cancellation and refund terms.</label></div>
+          <div class="ci"><input type="checkbox" id="s8" required><label for="s8">I agree to the group confidentiality agreement and online session rules.</label></div>
+          <div class="ci"><input type="checkbox" id="s9" required><label for="s9">I hold professional insurance and am registered with a relevant professional body.</label></div>
+        </div>
+        <div class="cr"><input type="checkbox" id="s10"><label for="s10">I would like to receive marketing emails from Claire Ratcliffe Psychotherapy.</label></div>
+        <p class="fn">By submitting you agree to our privacy notice and supervision group terms. GDPR compliant.</p>
+        <br><button class="btn bdk" onclick="validateAndSubmit(this,'Your application has been received. You will hear back within 2–3 working days with confirmation and payment details.')">Submit application →</button>
+      </div></div>
+    </div>
+    <div style="padding:4rem 0" id="wait-form"><div class="w"><div style="max-width:480px">
+      <span class="lbl">Waiting list</span>
+      <h2 style="font-family:var(--serif);font-size:1.6rem;margin-bottom:.4rem">Join the waiting list</h2>
+      <p style="font-size:.87rem;color:var(--mid);margin-bottom:1.5rem">Leave your details and you will be contacted when a space becomes available.</p>
+      <div class="fr"><div class="fg"><label>First name *</label><input type="text"/></div><div class="fg"><label>Last name *</label><input type="text"/></div></div>
+      <div class="fg"><label>Email *</label><input type="email"/></div>
+      <div class="cr"><input type="checkbox" id="wl1"><label for="wl1">I consent to being contacted about supervision group availability and related updates.</label></div>
+      <br><button class="btn bot" onclick="sf('You have been added to the waiting list. You will be contacted as soon as a space becomes available.')">Join waiting list →</button>
+    </div></div></div>
+  </div>
+
+  <!-- MAILING -->
+  <div class="hp" id="hp-mailing">
+    <div style="padding:5rem 0"><div class="w"><div class="tce tc" style="padding:0;gap:4rem">
+      <div>
+        <span class="lbl">Stay connected</span>
+        <h2 style="font-family:var(--serif);font-size:clamp(1.5rem,2.2vw,2.2rem);margin-bottom:1rem">Join the mailing list</h2>
+        <div class="dv"></div>
+        <p style="color:var(--mid);font-size:.9rem;line-height:1.88;margin-bottom:.8rem">Get updates on new content, upcoming events, group openings and occasional insights on couples and relationship therapy.</p>
+        <p style="color:var(--mid);font-size:.9rem;line-height:1.88">You can unsubscribe at any time. Marketing emails are separate from essential service communications.</p>
+      </div>
+      <div><div class="fp">
+        <div class="fr"><div class="fg"><label>First name *</label><input type="text"/></div><div class="fg"><label>Last name</label><input type="text"/></div></div>
+        <div class="fg"><label>Email *</label><input type="email"/></div>
+        <div class="fg"><label>I am a</label><select><option value="">Optional</option><option>Therapist / counsellor</option><option>Trainee therapist</option><option>Therapy client (individual)</option><option>Therapy client (couples)</option><option>Other</option></select></div>
+        <div class="cbg"><div class="ci"><input type="checkbox" id="ml1"><label for="ml1">I would like to receive marketing emails from Claire Ratcliffe Psychotherapy — including news, events, new content and group openings. I can unsubscribe at any time.</label></div></div>
+        <p class="fn">We will never share your data with third parties for marketing purposes.</p>
+        <br><button class="btn bdk" onclick="sf('Thank you — you are now on the mailing list. Please check your email for a confirmation.')">Subscribe →</button>
+      </div></div>
+    </div></div></div>
+  </div>
+  <footer><div class="w"><div class="fbo" style="border-top:1px solid rgba(255,255,255,.1);padding-top:1.3rem"><span style="color:rgba(255,255,255,.4)">© 2025 Claire Ratcliffe Psychotherapy</span><span class="btn blt" style="font-size:.66rem" onclick="sp('home')">← Home</span></div></div></footer>
+</div>
+<!-- ABOUT ME -->
+<div class="page" id="page-about">
+  <div class="ih-compact"><div class="w"><div class="ih-c">
+    <span class="lbl">About Claire</span>
+    <h1 style="font-size:clamp(2.1rem,3.5vw,3.4rem);margin:.35rem 0 1.1rem;font-family:var(--serif);font-weight:300;line-height:1.12">About<br><em style="font-style:italic;color:var(--sage)">Me</em></h1>
+    <p style="font-size:.97rem;color:var(--mid);margin-bottom:1.7rem;line-height:1.88;max-width:560px">"Healing happens when we feel safe enough to be fully ourselves."</p>
+  </div></div></div>
+  <div class="w"><div class="asp">
+    <div class="ai"><img src="https://images.squarespace-cdn.com/content/v1/6817c0c8f248c61a7135f52a/1748107198769-JOG4BI9A95HJG7BU9GKM/unsplash-image-sfL_QOnmy00.jpg" alt="Claire Ratcliffe" onerror="this.parentElement.style.background='var(--light)'"/></div>
+    <div>
+      <span class="lbl">Background</span>
+      <h2 style="font-family:var(--serif);font-size:clamp(1.5rem,2.3vw,2.2rem);margin-bottom:1rem">A specialist in relational and couples psychotherapy</h2>
+      <div class="dv"></div>
+      <p style="color:var(--mid);font-size:.92rem;line-height:1.88;margin-bottom:.8rem">I am a UKCP-registered psychotherapist and clinical supervisor. My work is integrative, drawing on Transactional Analysis, Relational Psychotherapy, Nervous System Regulation and a wide range of specialist approaches in couples, relationship and sex therapy.</p>
+      <p style="color:var(--mid);font-size:.92rem;line-height:1.88;margin-bottom:.8rem">I work online with individuals, couples and therapist groups across the UK and internationally where appropriate.</p>
+      <p style="color:var(--mid);font-size:.92rem;line-height:1.88;margin-bottom:1.5rem">Registered with WPA Insurance — if you hold a policy with them, please mention this in your initial enquiry.</p>
+      <span class="btn bot" onclick="sp('book')">Book a session →</span>
+    </div>
+  </div></div>
+  <div class="os"><div class="w">
+    <span class="lbl">Full training &amp; qualifications</span>
+    <h2 style="font-family:var(--serif);font-size:clamp(1.4rem,2vw,1.9rem);margin-bottom:.4rem">Training across therapy, supervision and specialist areas</h2>
+    <div class="dv"></div>
+    <div class="qg">
+      <div class="qb2"><h3>Psychotherapy Training</h3><ul><li>Post Graduate Diploma in Transactional Analysis &amp; Integrative Psychotherapy</li><li>Certificate in The Theory &amp; Methods of Relational &amp; Integrative Psychotherapy</li><li>Diploma in Integrative Counselling &amp; Psychotherapy</li><li>101 Transactional Analysis Certificate</li><li>Advanced Certificate in Trauma Informed Therapy</li><li>Certificate in Working with Eating Disorders</li><li>Certificate in Working with Therapy Groups</li><li>Certificate in Navigating your Nervous System</li></ul></div>
+      <div class="qb2"><h3>Couples &amp; Relationship Therapy</h3><ul><li>The Developmental Model of Couples Therapy — The Couples Institute</li><li>Relational Life Therapy for Couples – Level 1 – Relational Life Institute</li><li>Assessing &amp; Treating Sex Issues in Psychotherapy — Institute for Relational Intimacy</li><li>Advanced Certificate in Couples &amp; Relationship Counselling</li><li>Advanced Certificate in Working with Affairs &amp; Trauma</li><li>Working with Common Sexual Difficulties in Women (COSRT)</li><li>Transactional Analysis and Working with Couples</li><li>Can We Repair After the Affair / Forgiveness After the Affair</li><li>Domestic Abuse Awareness · BDSM/Kink · Infidelity &amp; Trauma</li><li>Working with Couples Online — The Couples Institute</li><li>Gender, Sexual and Relationship Diversity (COSRT)</li><li>Queer Relationships &amp; Queer Therapy (COSRT)</li><li>How to Love After Childhood Trauma</li></ul></div>
+      <div class="qb2"><h3>Neurodiversity</h3><ul><li>Certificate in Understanding Autism</li><li>Certificate in The Inner World of Asperger's</li><li>Certificate in Introduction to Child Development</li><li>Certificate in Neurobiology &amp; Human Development</li><li>Certificate in Understanding ADHD</li><li>Certificate in Neurodiversity</li></ul></div>
+      <div class="qb2"><h3>Additional &amp; Supervision Training</h3><ul><li>Psychology of Sexualised Trauma</li><li>Working Therapeutically with Survivors of Sexualised Trauma</li><li>Working with Addiction · Diploma in Social Care</li><li>Transgender Awareness</li><li>Supervision Training — Manchester Institute for Psychotherapy (2015)</li><li>Group Supervision training</li><li>Certificate in LGBTQ+ informed Supervision</li></ul></div>
+    </div>
+  </div></div>
+  <footer><div class="w"><div class="fbo" style="border-top:1px solid rgba(255,255,255,.1);padding-top:1.3rem"><span style="color:rgba(255,255,255,.4)">© 2025 Claire Ratcliffe Psychotherapy</span><span class="btn blt" style="font-size:.66rem" onclick="sp('home')">← Home</span></div></div></footer>
+</div>
+
+<!-- FEES -->
+<div class="page" id="page-fees">
+  <div class="ih-compact"><div class="w"><div class="ih-c">
+    <span class="lbl">Transparent pricing</span>
+    <h1 style="font-size:clamp(2.1rem,3.5vw,3.4rem);margin:.35rem 0 1.1rem;font-family:var(--serif);font-weight:300;line-height:1.12">Fees &amp;<br><em style="font-style:italic;color:var(--sage)">How to Book</em></h1>
+    <p style="font-size:.97rem;color:var(--mid);margin-bottom:1.7rem;line-height:1.88;max-width:560px">A complete summary of all session fees, packages and membership options — with direct links through to booking. For common questions, see the <a onclick="sp('faq')" style="color:var(--sage);cursor:pointer;text-decoration:underline">FAQs</a>.</p>
+  </div></div></div>
+  <div class="w" style="padding:4rem 0">
+    <div class="fb" style="margin-top:0;margin-bottom:2.5rem"><strong>Reduced fee spaces:</strong> A small number of spaces are reserved for those experiencing financial difficulty. Please mention this in your enquiry.</div>
+    <div class="fg2">
+      <div class="fc"><h3>Individual Therapy</h3><table><tr><td>50 min — weekday before 5pm</td><td>£120</td></tr><tr><td>50 min — evening or weekend</td><td>£135</td></tr></table><br><span class="btn bdk" style="font-size:.68rem;width:100%;text-align:center;display:block" onclick="sp('book')">Book individual session →</span></div>
+      <div class="fc"><h3>Couples &amp; Relationship Therapy</h3><table><tr><td>60 min — daytime</td><td>£165</td></tr><tr><td>90 min — daytime</td><td>£240</td></tr><tr><td>60 min — eve/weekend</td><td>£185</td></tr><tr><td>90 min — eve/weekend</td><td>£270</td></tr></table><br><span class="btn bdk" style="font-size:.68rem;width:100%;text-align:center;display:block" onclick="sp('book')">Book couples session →</span></div>
+      <div class="fc"><h3>Couples Therapy Intensive</h3><table><tr><td>3 hours</td><td>£520</td></tr><tr><td>1 day</td><td>£910</td></tr><tr><td>2 days</td><td>£1,850</td></tr><tr><td>3 days (inc. follow-up)</td><td>£2,800</td></tr></table><p style="font-size:.77rem;color:var(--muted);margin-top:.7rem">Bookings by enquiry only.</p><br><span class="btn bdk" style="font-size:.68rem;width:100%;text-align:center;display:block" onclick="sp('book');sbt('intensive')">Enquire about an intensive →</span></div>
+      <div class="fc"><h3>Clinical Supervision</h3><table><tr><td>Individual — per hour</td><td>£100</td></tr><tr><td>Group (monthly)</td><td>£80</td></tr><tr><td>Group — 6-month upfront</td><td>£440</td></tr></table><p style="font-size:.77rem;color:var(--muted);margin-top:.7rem">Individual supervision by enquiry.</p><br><span class="btn bdk" style="font-size:.68rem;width:100%;text-align:center;display:block" onclick="sp('supervision')">Supervision options →</span></div>
+      <div class="fc sg"><h3>Large Group Membership</h3><table><tr><td>Rolling monthly</td><td>£60/mo</td></tr></table><p style="font-size:.77rem;color:var(--muted);margin-top:.7rem">2 live sessions/month + educational resources. Cancel with agreed notice.</p><br><span class="btn bsg" style="font-size:.68rem;width:100%;text-align:center;display:block" onclick="sp('therapists');sht('membership')">Join membership →</span></div>
+      <div class="fc sg"><h3>Small Supervision Groups</h3><table><tr><td>Monthly plan (×6)</td><td>£80/mo</td></tr><tr><td>Upfront 6-month block</td><td>£440</td></tr></table><p style="font-size:.77rem;color:var(--muted);margin-top:.7rem">6-month commitment. Monthly option is a payment plan, not cancellable.</p><br><span class="btn bdk" style="font-size:.68rem;width:100%;text-align:center;display:block" onclick="sp('therapists');sht('groups')">Apply to join →</span></div>
+    </div>
+    <div class="fb"><strong>Cancellation:</strong> 48 hours' notice required for individual and couples sessions. Late cancellations and non-attendance charged at the full session rate. Group sessions cannot be cancelled or rescheduled by participants. <strong>Payment</strong> is required at the time of booking for all individual and couples sessions. Receipts are issued automatically.</div>
+    <div style="margin-top:2rem;text-align:center"><span class="btn bot" onclick="sp('faq')">View FAQs →</span></div>
+  </div>
+  <footer><div class="w"><div class="fbo" style="border-top:1px solid rgba(255,255,255,.1);padding-top:1.3rem"><span style="color:rgba(255,255,255,.4)">© 2025 Claire Ratcliffe Psychotherapy</span><span class="btn blt" style="font-size:.66rem" onclick="sp('home')">← Home</span></div></div></footer>
+</div>
+
+<!-- CONTACT -->
+<div class="page" id="page-contact">
+  <div class="ih-compact"><div class="w"><div class="ih-c">
+    <span class="lbl">Questions before getting started?</span>
+    <h1 style="font-size:clamp(2.1rem,3.5vw,3.4rem);margin:.35rem 0 1.1rem;font-family:var(--serif);font-weight:300;line-height:1.12">Get<br><em style="font-style:italic;color:var(--sage)">in Touch</em></h1>
+    <p style="font-size:.97rem;color:var(--mid);margin-bottom:1.7rem;line-height:1.88;max-width:560px">I aim to respond to all enquiries within 2 working days. If you don't hear back, please check your spam folder.</p>
+  </div></div></div>
+  <div class="w"><div class="cs">
+    <div>
+      <span class="lbl">Contact details</span>
+      <h2 style="font-family:var(--serif);font-size:clamp(1.5rem,2.2vw,2.1rem);margin-bottom:1rem">I'd love to hear from you</h2>
+      <div class="dv"></div>
+      <div class="cd"><strong>Email</strong><a href="mailto:claireratcliffetherapy@gmail.com">claireratcliffetherapy@gmail.com</a></div>
+      <div class="cd"><strong>Phone</strong><a href="tel:07830906822">07830 906822</a></div>
+      <p style="color:var(--mid);font-size:.9rem;line-height:1.88;margin-top:1.2rem">Whether you're looking for therapy, enquiring about an intensive, joining a supervision group or asking about the membership — get in touch and I'll help you find the right route.</p>
+      <div style="margin-top:2rem">
+        <span class="lbl">Find me online</span>
+        <div class="sp">
+          <a href="https://www.instagram.com/cr_psychotherapy/" target="_blank">Instagram</a>
+          <a href="https://www.facebook.com/CRPsych" target="_blank">Facebook</a>
+          <a href="https://www.tiktok.com/@cr_psychotherapy" target="_blank">TikTok</a>
+          <a href="https://uk.linkedin.com/in/claire-ratcliffe-psychotherapy-6338175a" target="_blank">LinkedIn</a>
+          <a href="https://www.youtube.com/@CR_Psychotherapy" target="_blank">YouTube</a>
+          <a href="https://podcasts.apple.com/gb/podcast/healing-relationships-with-ourselves-others-the-world/id1839908625" target="_blank">Podcast</a>
+        </div>
+      </div>
+      <div style="background:var(--off);padding:1.5rem;border-left:2px solid var(--sage);margin-top:2rem">
+        <span class="lbl">WPA Insurance</span>
+        <p style="font-size:.88rem;color:var(--mid);line-height:1.8">I am registered with WPA Insurance. If you hold a policy with them, please mention this in your initial enquiry.</p>
+      </div>
+    </div>
+    <div>
+      <span class="lbl">Send a message</span>
+      <div class="fp">
+        <div class="fr"><div class="fg"><label>First name *</label><input type="text" required/></div><div class="fg"><label>Last name *</label><input type="text" required/></div></div>
+        <div class="fg"><label>Email *</label><input type="email" required/></div>
+        <div class="fg"><label>Phone</label><input type="tel"/></div>
+        <div class="fg"><label>I am enquiring about</label><select><option value="">Please select</option><option>Individual therapy</option><option>Couples / relationship therapy</option><option>Couples therapy intensive</option><option>Clinical supervision (individual)</option><option>Small supervision group</option><option>Large group membership</option><option>Something else</option></select></div>
+        <div class="fg"><label>Your message</label><textarea placeholder="Tell me a little about what you're looking for — or just say hello."></textarea></div>
+        <div class="cr"><input type="checkbox" id="cl1"><label for="cl1">I would like to receive marketing updates from Claire Ratcliffe Psychotherapy. I can unsubscribe at any time.</label></div>
+        <p class="fn">Data processed in accordance with GDPR and our <a onclick="sp('privacy')" style="color:var(--sage);cursor:pointer">privacy policy</a>.</p>
+        <br><button class="btn bdk" onclick="sf('Thank you for your message. I aim to reply within 2 working days.')">Send message →</button>
+      </div>
+    </div>
+  </div></div>
+  <footer><div class="w"><div class="fbo" style="border-top:1px solid rgba(255,255,255,.1);padding-top:1.3rem"><span style="color:rgba(255,255,255,.4)">© 2025 Claire Ratcliffe Psychotherapy</span><span class="btn blt" style="font-size:.66rem" onclick="sp('home')">← Home</span></div></div></footer>
+</div>
+
+<!-- FAQ PAGE -->
+<div class="page" id="page-faq">
+  <div class="ih-compact"><div class="w"><div class="ih-c">
+    <span class="lbl">Help &amp; information</span>
+    <h1 style="font-size:clamp(2.1rem,3.5vw,3.4rem);margin:.35rem 0 1.1rem;font-family:var(--serif);font-weight:300;line-height:1.12">Frequently Asked<br><em style="font-style:italic;color:var(--sage)">Questions</em></h1>
+    <p style="font-size:.97rem;color:var(--mid);margin-bottom:1.7rem;line-height:1.88;max-width:560px">If you can't find an answer here, please <a onclick="sp('contact')" style="color:var(--sage);cursor:pointer">get in touch</a> and I'll be happy to help.</p>
+  </div></div></div>
+  <div class="w" style="padding:4rem 0">
+    <div style="max-width:780px">
+      <h2 style="font-family:var(--serif);font-size:1.5rem;margin-bottom:1.5rem;color:var(--charcoal)">Therapy — general</h2>
+      <div class="fi"><div class="fq" onclick="tf(this)">How do I know if therapy is right for me? <span class="fi-ico">+</span></div><div class="fa">Many people find that talking things through in a safe, non-judgemental space helps them gain perspective, process emotions and make positive changes. If you are unsure, you are welcome to get in touch — there is no obligation to book after an initial enquiry.</div></div>
+      <div class="fi"><div class="fq" onclick="tf(this)">Do I need a referral to book? <span class="fi-ico">+</span></div><div class="fa">No. You can book directly via the booking page. New clients book into released availability — existing regular clients continue with the current process.</div></div>
+      <div class="fi"><div class="fq" onclick="tf(this)">What happens in the first session? <span class="fi-ico">+</span></div><div class="fa">The first session is an opportunity for us to meet, for you to share a little about what has brought you to therapy, and for us to think together about what you are hoping to get from the work. There is no pressure to share more than you are ready to.</div></div>
+      <div class="fi"><div class="fq" onclick="tf(this)">How many sessions will I need? <span class="fi-ico">+</span></div><div class="fa">This varies considerably depending on what brings you to therapy and what you are hoping to achieve. Some people find a short block of sessions useful; others prefer to work over a longer period. We will review progress together regularly and you are always free to end when you feel ready.</div></div>
+      <div class="fi"><div class="fq" onclick="tf(this)">Is everything I say confidential? <span class="fi-ico">+</span></div><div class="fa">Yes, with the usual professional exceptions. Confidentiality may need to be broken if there is a serious risk of harm to yourself or others, or if required by law. These limits are explained fully in the Terms and Conditions of Service.</div></div>
+      <div class="fi"><div class="fq" onclick="tf(this)">Do you offer reduced fees? <span class="fi-ico">+</span></div><div class="fa">A small number of reduced fee spaces are reserved for those experiencing financial difficulty. These are limited and offered depending on individual circumstances and current availability. Please mention this in your enquiry.</div></div>
+
+      <h2 style="font-family:var(--serif);font-size:1.5rem;margin:3rem 0 1.5rem;color:var(--charcoal)">Booking &amp; payments</h2>
+      <div class="fi"><div class="fq" onclick="tf(this)">What is the cancellation policy? <span class="fi-ico">+</span></div><div class="fa">48 hours' notice is required to cancel or reschedule any individual or couples session. Cancellations with less than 48 hours' notice and non-attendance are charged at the full session rate. Group sessions cannot be cancelled or rescheduled by participants.</div></div>
+      <div class="fi"><div class="fq" onclick="tf(this)">How do I pay? <span class="fi-ico">+</span></div><div class="fa">Payment is taken via Stripe at the time of booking for all individual and couples sessions. Receipts are issued automatically. Membership and supervision group payments are also handled via Stripe.</div></div>
+      <div class="fi"><div class="fq" onclick="tf(this)">Are sessions recorded? <span class="fi-ico">+</span></div><div class="fa">No. Sessions are never recorded. You will be asked to confirm this at booking.</div></div>
+      <div class="fi"><div class="fq" onclick="tf(this)">What platform are sessions held on? <span class="fi-ico">+</span></div><div class="fa">Sessions are held via Zoom. A unique, secure link is sent with your booking confirmation. You must attend from a private space where you will not be interrupted or overheard.</div></div>
+
+      <h2 style="font-family:var(--serif);font-size:1.5rem;margin:3rem 0 1.5rem;color:var(--charcoal)">Couples therapy &amp; intensive</h2>
+      <div class="fi"><div class="fq" onclick="tf(this)">One of us isn't sure about coming — is that okay? <span class="fi-ico">+</span></div><div class="fa">Yes. Ambivalence is very common when entering couples therapy. An initial session can be a helpful way to explore whether therapy is right for you at this time, without any commitment to ongoing work.</div></div>
+      <div class="fi"><div class="fq" onclick="tf(this)">What is a couples intensive? <span class="fi-ico">+</span></div><div class="fa">A couples intensive is a concentrated block of therapy — from 3 hours up to 3 days — allowing deeper work in a shorter timeframe than weekly sessions. It is available online and bookings are by enquiry.</div></div>
+      <div class="fi"><div class="fq" onclick="tf(this)">Can we do a couples intensive and then continue with weekly sessions? <span class="fi-ico">+</span></div><div class="fa">Yes. Some couples use an intensive as a starting point and then continue with regular sessions. Others find the intensive stands alone. We discuss what would be most useful for you at the enquiry stage.</div></div>
+
+      <h2 style="font-family:var(--serif);font-size:1.5rem;margin:3rem 0 1.5rem;color:var(--charcoal)">Clinical supervision</h2>
+      <div class="fi"><div class="fq" onclick="tf(this)">Do you supervise trainees? <span class="fi-ico">+</span></div><div class="fa">Yes. I supervise both qualified therapists and trainees across a range of courses and placements. Please get in touch to discuss your specific training requirements.</div></div>
+      <div class="fi"><div class="fq" onclick="tf(this)">Can I join a supervision group if I am new to couples work? <span class="fi-ico">+</span></div><div class="fa">Yes. The groups welcome therapists who are new to couples work as well as those with more experience. You should be qualified or in advanced training, hold professional insurance and be a member of a relevant professional body.</div></div>
+      <div class="fi"><div class="fq" onclick="tf(this)">What happens if the group doesn't reach the minimum number? <span class="fi-ico">+</span></div><div class="fa">A group requires a minimum of 4 participants. If the minimum is not reached, you will be offered a place in the next available group or a full refund.</div></div>
+
+      <h2 style="font-family:var(--serif);font-size:1.5rem;margin:3rem 0 1.5rem;color:var(--charcoal)">Group membership</h2>
+      <div class="fi"><div class="fq" onclick="tf(this)">Are the live membership sessions recorded? <span class="fi-ico">+</span></div><div class="fa">No. Live sessions are never recorded. This protects the confidentiality of all members. The pre-recorded educational content is separate and available at any time.</div></div>
+      <div class="fi"><div class="fq" onclick="tf(this)">Can I access content after I cancel my membership? <span class="fi-ico">+</span></div><div class="fa">No. Access to all member-only content ends at the end of your final paid month.</div></div>
+    </div>
+  </div>
+  <footer><div class="w"><div class="fbo" style="border-top:1px solid rgba(255,255,255,.1);padding-top:1.3rem"><span style="color:rgba(255,255,255,.4)">© 2025 Claire Ratcliffe Psychotherapy</span><span class="btn blt" style="font-size:.66rem" onclick="sp('home')">← Home</span></div></div></footer>
+</div>
+
+<!-- PRIVACY POLICY -->
+<div class="page" id="page-privacy">
+  <div class="ih-compact"><div class="w"><div class="ih-c">
+    <span class="lbl">Legal</span>
+    <h1 style="font-size:clamp(2rem,3vw,3rem);margin:.35rem 0 1.1rem;font-family:var(--serif);font-weight:300;line-height:1.12">Privacy<br><em style="font-style:italic;color:var(--sage)">Policy</em></h1>
+    <p style="font-size:.92rem;color:var(--mid)">Last updated: 2025</p>
+  </div></div></div>
+  <div class="w" style="padding:4rem 0"><div style="max-width:780px">
+    <h2 style="font-family:var(--serif);font-size:1.4rem;margin-bottom:1rem">Who we are</h2>
+    <p style="color:var(--mid);font-size:.92rem;line-height:1.88;margin-bottom:1.5rem">Claire Ratcliffe Psychotherapy is a sole trader practice run by Claire Ratcliffe, UKCP-registered psychotherapist. Contact: claireratcliffetherapy@gmail.com · 07830 906822.</p>
+    <h2 style="font-family:var(--serif);font-size:1.4rem;margin-bottom:1rem">What data we collect</h2>
+    <p style="color:var(--mid);font-size:.92rem;line-height:1.88;margin-bottom:.8rem">We collect personal information you provide when you: book a session or enquiry, join the membership or a supervision group, sign up to the mailing list, or contact us directly. This may include your name, address, contact details, emergency contact, professional registration details and information about your reasons for seeking support.</p>
+    <h2 style="font-family:var(--serif);font-size:1.4rem;margin-bottom:1rem;margin-top:1.5rem">How we use your data</h2>
+    <p style="color:var(--mid);font-size:.92rem;line-height:1.88;margin-bottom:.8rem">Your data is used to provide and manage the services you have requested, to send essential service communications (appointment confirmations, reminders, receipts), and — where you have given consent — to send marketing communications. We do not sell or share your data with third parties for marketing purposes.</p>
+    <h2 style="font-family:var(--serif);font-size:1.4rem;margin-bottom:1rem;margin-top:1.5rem">Data retention</h2>
+    <p style="color:var(--mid);font-size:.92rem;line-height:1.88;margin-bottom:.8rem">Client records are retained for 7 years following the end of the therapeutic relationship, in line with professional body guidance. Mailing list data is retained until you unsubscribe. You may request deletion of your data at any time, subject to our legal and professional obligations.</p>
+    <h2 style="font-family:var(--serif);font-size:1.4rem;margin-bottom:1rem;margin-top:1.5rem">Your rights</h2>
+    <p style="color:var(--mid);font-size:.92rem;line-height:1.88;margin-bottom:.8rem">Under GDPR you have the right to access, correct, or request deletion of your personal data; to object to processing; and to withdraw consent for marketing at any time. To exercise these rights, please contact claireratcliffetherapy@gmail.com.</p>
+    <h2 style="font-family:var(--serif);font-size:1.4rem;margin-bottom:1rem;margin-top:1.5rem">Cookies &amp; third parties</h2>
+    <p style="color:var(--mid);font-size:.92rem;line-height:1.88;margin-bottom:.8rem">This website may use cookies for analytics. Payment is processed by Stripe; booking by Acuity Scheduling; email by Squarespace Email Campaigns. Each has their own privacy policy. We do not store payment card data.</p>
+    <h2 style="font-family:var(--serif);font-size:1.4rem;margin-bottom:1rem;margin-top:1.5rem">ICO registration</h2>
+    <p style="color:var(--mid);font-size:.92rem;line-height:1.88;margin-bottom:1.5rem">Claire Ratcliffe Psychotherapy is registered with the Information Commissioner's Office (ICO) as required for organisations that process personal data.</p>
+    <p style="color:var(--mid);font-size:.88rem;font-style:italic">For any queries about this policy, contact claireratcliffetherapy@gmail.com.</p>
+  </div></div>
+  <footer><div class="w"><div class="fbo" style="border-top:1px solid rgba(255,255,255,.1);padding-top:1.3rem"><span style="color:rgba(255,255,255,.4)">© 2025 Claire Ratcliffe Psychotherapy</span><span class="btn blt" style="font-size:.66rem" onclick="sp('home')">← Home</span></div></div></footer>
+</div>
+
+<!-- TERMS & CONDITIONS -->
+<div class="page" id="page-terms">
+  <div class="ih-compact"><div class="w"><div class="ih-c">
+    <span class="lbl">Legal</span>
+    <h1 style="font-size:clamp(2rem,3vw,3rem);margin:.35rem 0 1.1rem;font-family:var(--serif);font-weight:300;line-height:1.12">Terms &amp; Conditions<br><em style="font-style:italic;color:var(--sage)">of Service</em></h1>
+    <p style="font-size:.92rem;color:var(--mid)">Last updated: 2025</p>
+  </div></div></div>
+  <div class="w" style="padding:4rem 0"><div style="max-width:780px">
+    <h2 style="font-family:var(--serif);font-size:1.4rem;margin-bottom:1rem">1. The therapeutic relationship</h2>
+    <p style="color:var(--mid);font-size:.92rem;line-height:1.88;margin-bottom:1.5rem">Claire Ratcliffe Psychotherapy provides confidential online psychotherapy, couples therapy, sex therapy, clinical supervision, and related educational services. By booking a session or joining a membership or supervision group, you agree to these terms.</p>
+    <h2 style="font-family:var(--serif);font-size:1.4rem;margin-bottom:1rem">2. Confidentiality</h2>
+    <p style="color:var(--mid);font-size:.92rem;line-height:1.88;margin-bottom:1.5rem">All sessions are strictly confidential. Confidentiality may only be broken where there is a serious and imminent risk of harm to you or others, where required by law, or as part of mandatory supervision and clinical consultation (where identifying information is not shared). In group settings, all members agree to maintain the confidentiality of other participants.</p>
+    <h2 style="font-family:var(--serif);font-size:1.4rem;margin-bottom:1rem">3. Cancellations &amp; payment</h2>
+    <p style="color:var(--mid);font-size:.92rem;line-height:1.88;margin-bottom:1.5rem">Individual and couples sessions require 48 hours' notice to cancel or reschedule. Cancellations made with less than 48 hours' notice and non-attendance will be charged at the full session rate. Payment is required at the time of booking. Group sessions and supervision groups cannot be cancelled or rescheduled by participants once confirmed. The supervision group monthly payment option is a payment plan, not a rolling subscription — the full 6-month fee remains payable once a place is confirmed.</p>
+    <h2 style="font-family:var(--serif);font-size:1.4rem;margin-bottom:1rem">4. Online sessions</h2>
+    <p style="color:var(--mid);font-size:.92rem;line-height:1.88;margin-bottom:1.5rem">You agree to attend all sessions from a private, confidential space where you will not be interrupted or overheard. No one else may be present unless agreed in advance. Sessions must not be recorded by participants under any circumstances. A stable internet connection and working camera and microphone are your responsibility.</p>
+    <h2 style="font-family:var(--serif);font-size:1.4rem;margin-bottom:1rem">5. Suitability</h2>
+    <p style="color:var(--mid);font-size:.92rem;line-height:1.88;margin-bottom:1.5rem">Psychotherapy and counselling are not suitable for everyone in all circumstances. If at any point it becomes clear that another form of support would be more appropriate, this will be discussed openly. In an emergency, please contact your GP or call 999.</p>
+    <h2 style="font-family:var(--serif);font-size:1.4rem;margin-bottom:1rem">6. Professional standards</h2>
+    <p style="color:var(--mid);font-size:.92rem;line-height:1.88;margin-bottom:1.5rem">Claire Ratcliffe is a registered member of the UKCP (United Kingdom Council for Psychotherapy) and works in accordance with their Ethical Principles and Code of Professional Conduct. She holds professional indemnity insurance and engages in regular supervision and continuing professional development.</p>
+    <h2 style="font-family:var(--serif);font-size:1.4rem;margin-bottom:1rem">7. Complaints</h2>
+    <p style="color:var(--mid);font-size:.92rem;line-height:1.88;margin-bottom:1.5rem">If you have a concern or complaint, please raise it directly with Claire in the first instance at claireratcliffetherapy@gmail.com. If the matter cannot be resolved, you have the right to contact the UKCP via their website.</p>
+    <h2 style="font-family:var(--serif);font-size:1.4rem;margin-bottom:1rem">8. Educational content disclaimer</h2>
+    <p style="color:var(--mid);font-size:.92rem;line-height:1.88;margin-bottom:1.5rem">All educational content within the group membership is provided for informational and professional development purposes only. It does not constitute clinical advice, supervision or therapy, and should not be used as a substitute for individual supervision, personal therapy or clinical guidance.</p>
+    <p style="color:var(--mid);font-size:.88rem;font-style:italic">These terms are governed by English law.</p>
+  </div></div>
+  <footer><div class="w"><div class="fbo" style="border-top:1px solid rgba(255,255,255,.1);padding-top:1.3rem"><span style="color:rgba(255,255,255,.4)">© 2025 Claire Ratcliffe Psychotherapy</span><span class="btn blt" style="font-size:.66rem" onclick="sp('home')">← Home</span></div></div></footer>
+</div>
+
+<!-- MODAL -->
+<div class="mo" id="modal"><div class="md"><h3>Received ✓</h3><p id="modalMsg"></p><span class="btn bdk" onclick="cm2()">Close</span></div></div>
+
+<script>
+function sp(n){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById('page-'+n).classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('sc',window.scrollY>20));
+document.getElementById('hbg').addEventListener('click',()=>document.getElementById('mm').classList.toggle('open'));
+function cm(){document.getElementById('mm').classList.remove('open')}
+function sid(id){const el=document.getElementById(id);if(el)setTimeout(()=>el.scrollIntoView({behavior:'smooth',block:'start'}),80)}
+function showBookPanel(val){
+  document.querySelectorAll('.bk-panel').forEach(p=>p.classList.remove('active'));
+  if(val)document.getElementById('bk-'+val).classList.add('active');
+}
+function sbt(name){
+  sp('book');
+  setTimeout(()=>{const s=document.getElementById('sessionType');if(s){s.value=name;showBookPanel(name)}},120);
+}
+function sht(name,el){
+  document.querySelectorAll('.htb').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.hp').forEach(p=>p.classList.remove('active'));
+  if(el)el.classList.add('active');
+  else document.getElementById('ht-'+name).classList.add('active');
+  document.getElementById('hp-'+name).classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function tf(el){el.classList.toggle('open');el.nextElementSibling.classList.toggle('open')}
+function sf(msg){document.getElementById('modalMsg').textContent=msg;document.getElementById('modal').classList.add('open')}
+function cm2(){document.getElementById('modal').classList.remove('open')}
+document.getElementById('modal').addEventListener('click',function(e){if(e.target===this)cm2()});
+function validateAndSubmit(btn,msg){
+  const panel=btn.closest('.fp,.fpanel');
+  if(!panel)return sf(msg);
+  const required=panel.querySelectorAll('input[required],input.req-cb[required]');
+  let ok=true;
+  required.forEach(i=>{if(i.type==='checkbox'&&!i.checked){ok=false;i.closest('.ci,.cbi').style.outline='2px solid #b94040';}else if(i.type!=='checkbox'&&!i.value.trim()){ok=false;i.style.borderColor='#b94040';}});
+  if(!ok){
+    const warn=panel.querySelector('.req-warn')||document.createElement('p');
+    warn.className='req-warn';warn.style.cssText='color:#b94040;font-size:.8rem;margin:.5rem 0';
+    warn.textContent='Please complete all required fields and confirm all mandatory declarations before submitting.';
+    if(!panel.querySelector('.req-warn'))btn.parentNode.insertBefore(warn,btn);
+    return;
+  }
+  sf(msg);
+}
+</script>
+</body>
+</html>
